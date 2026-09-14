@@ -1,0 +1,3109 @@
+{
+  "as_of": "2026-06-17T07:45:00+05:30",
+  "policy": {
+    "freshness_seconds": 60,
+    "materiality_minutes": 5,
+    "persistence_points": 3,
+    "persistence_gap_seconds": 30,
+    "verification_gap_seconds": 300,
+    "origin_radius_m": 100,
+    "origin_duration_minutes": 5,
+    "reference_gap_seconds": 60,
+    "history_days": 2,
+    "position_stress_m": 100,
+    "excluded_operators": [
+      7
+    ],
+    "contractual_reporting_requests": {
+      "12": {
+        "requested_lateness_minutes": 0,
+        "source": "HANDOFF.md rev. C",
+        "apply_to_operational_output": false
+      }
+    }
+  },
+  "sources": {
+    "routes.csv": {
+      "sha256": "c3aec9697d98556bee585e09982b47a8fb6a0bcfa5d9ef7b634b8aefd618af05",
+      "bytes": 394
+    },
+    "stops.csv": {
+      "sha256": "e3d313e281cb1410b8f2a9a86c344703c0b32c3a42fd5606a252cea16d524473",
+      "bytes": 2015
+    },
+    "trips.csv": {
+      "sha256": "6a2151ec636f6da3e36ee30e10ce9ea2161230a3511ee45a0bb02d41039b90df",
+      "bytes": 1770
+    },
+    "bookings.csv": {
+      "sha256": "e385117001aafdec735e3e483111267be2c52a6ac3e021a4b48966bb716e5726",
+      "bytes": 17154
+    },
+    "gps_pings.csv": {
+      "sha256": "e957f801c4f911290717f248bcf1e69bc9541a8f5fa1469fbc300d7d379b66d9",
+      "bytes": 421312
+    }
+  },
+  "gps_audit": {
+    "raw_rows": 4465,
+    "after_cutoff": 651,
+    "invalid_receipt": [],
+    "duplicates": [
+      {
+        "source_line": 4466,
+        "raw": {
+          "ping_id": "P-0002821",
+          "vehicle_id": "V-11",
+          "operator_id": "5",
+          "lat": "19.130639",
+          "lon": "72.912933",
+          "speed_kmph": "14.9",
+          "recorded_at": "2026-06-17 07:39:17+05:30",
+          "received_at": "2026-06-17 07:39:20+05:30"
+        },
+        "retained_line": 3249
+      }
+    ],
+    "id_collisions": [
+      {
+        "ping_id": "P-0002821",
+        "first_line": 2822,
+        "other_line": 4466
+      }
+    ],
+    "quarantined": [
+      {
+        "source_line": 1798,
+        "raw": {
+          "ping_id": "P-0001797",
+          "vehicle_id": "V-06",
+          "operator_id": "5",
+          "lat": "19.225884",
+          "lon": "72.856957",
+          "speed_kmph": "14.7",
+          "recorded_at": "2026-06-16 06:60:23+05:30",
+          "received_at": "2026-06-16 06:42:24+05:30"
+        },
+        "reason": "invalid_or_future_device_time"
+      },
+      {
+        "source_line": 3149,
+        "raw": {
+          "ping_id": "P-0003148",
+          "vehicle_id": "V-11",
+          "operator_id": "5",
+          "lat": "19.6889",
+          "lon": "73.508093",
+          "speed_kmph": "6550.6",
+          "recorded_at": "2026-06-17 07:06:02+05:30",
+          "received_at": "2026-06-17 07:06:06+05:30"
+        },
+        "ping_id": "P-0003148",
+        "vehicle_id": "V-11",
+        "operator_id": 5,
+        "trip_id": "TRIP_013",
+        "route_id": 9,
+        "recorded_at": "2026-06-17T07:06:02+05:30",
+        "received_at": "2026-06-17T07:06:06+05:30",
+        "lat": 19.6889,
+        "lon": 73.508093,
+        "speed_kmph": 6550.6,
+        "usable_speed_kmph": null,
+        "progress_km": 0.0,
+        "offset_km": 76.39921467800565,
+        "origin_distance_m": 76328.55867127053,
+        "elapsed_min": 16.033333333333335,
+        "event_age_s": 2338.0,
+        "receipt_age_s": 2334.0,
+        "reason": "impossible_position",
+        "implied_kmph_from_last_credible": 14406.10499650684
+      },
+      {
+        "source_line": 3150,
+        "raw": {
+          "ping_id": "P-0003149",
+          "vehicle_id": "V-11",
+          "operator_id": "5",
+          "lat": "19.538136",
+          "lon": "72.57761",
+          "speed_kmph": "7812.8",
+          "recorded_at": "2026-06-17 07:06:25+05:30",
+          "received_at": "2026-06-17 07:06:29+05:30"
+        },
+        "ping_id": "P-0003149",
+        "vehicle_id": "V-11",
+        "operator_id": 5,
+        "trip_id": "TRIP_013",
+        "route_id": 9,
+        "recorded_at": "2026-06-17T07:06:25+05:30",
+        "received_at": "2026-06-17T07:06:29+05:30",
+        "lat": 19.538136,
+        "lon": 72.57761,
+        "speed_kmph": 7812.8,
+        "usable_speed_kmph": null,
+        "progress_km": 0.0,
+        "offset_km": 55.08292400247822,
+        "origin_distance_m": 55041.90262922342,
+        "elapsed_min": 16.416666666666668,
+        "event_age_s": 2315.0,
+        "receipt_age_s": 2311.0,
+        "reason": "impossible_position",
+        "implied_kmph_from_last_credible": 4661.265604048863
+      },
+      {
+        "source_line": 3151,
+        "raw": {
+          "ping_id": "P-0003150",
+          "vehicle_id": "V-11",
+          "operator_id": "5",
+          "lat": "19.687546",
+          "lon": "72.57713",
+          "speed_kmph": "6500.2",
+          "recorded_at": "2026-06-17 07:06:45+05:30",
+          "received_at": "2026-06-17 07:06:47+05:30"
+        },
+        "ping_id": "P-0003150",
+        "vehicle_id": "V-11",
+        "operator_id": 5,
+        "trip_id": "TRIP_013",
+        "route_id": 9,
+        "recorded_at": "2026-06-17T07:06:45+05:30",
+        "received_at": "2026-06-17T07:06:47+05:30",
+        "lat": 19.687546,
+        "lon": 72.57713,
+        "speed_kmph": 6500.2,
+        "usable_speed_kmph": null,
+        "progress_km": 0.0,
+        "offset_km": 67.05286134309947,
+        "origin_distance_m": 67006.89145663712,
+        "elapsed_min": 16.75,
+        "event_age_s": 2295.0,
+        "receipt_age_s": 2293.0,
+        "reason": "impossible_position",
+        "implied_kmph_from_last_credible": 3903.622174958201
+      }
+    ],
+    "invalid_speed": [
+      {
+        "source_line": 3149,
+        "ping_id": "P-0003148",
+        "raw_speed": "6550.6"
+      },
+      {
+        "source_line": 3150,
+        "ping_id": "P-0003149",
+        "raw_speed": "7812.8"
+      },
+      {
+        "source_line": 3151,
+        "ping_id": "P-0003150",
+        "raw_speed": "6500.2"
+      },
+      {
+        "source_line": 3996,
+        "ping_id": "P-0003995",
+        "raw_speed": "-3.8066931542406297"
+      }
+    ],
+    "excluded_operator_rows": [
+      {
+        "source_line": 4285,
+        "trip_id": "TRIP_019",
+        "vehicle_id": "V-09",
+        "operator_id": 7
+      },
+      {
+        "source_line": 4286,
+        "trip_id": "TRIP_019",
+        "vehicle_id": "V-09",
+        "operator_id": 7
+      },
+      {
+        "source_line": 4287,
+        "trip_id": "TRIP_019",
+        "vehicle_id": "V-09",
+        "operator_id": 7
+      },
+      {
+        "source_line": 4288,
+        "trip_id": "TRIP_019",
+        "vehicle_id": "V-09",
+        "operator_id": 7
+      },
+      {
+        "source_line": 4289,
+        "trip_id": "TRIP_019",
+        "vehicle_id": "V-09",
+        "operator_id": 7
+      },
+      {
+        "source_line": 4290,
+        "trip_id": "TRIP_019",
+        "vehicle_id": "V-09",
+        "operator_id": 7
+      },
+      {
+        "source_line": 4291,
+        "trip_id": "TRIP_019",
+        "vehicle_id": "V-09",
+        "operator_id": 7
+      },
+      {
+        "source_line": 4292,
+        "trip_id": "TRIP_019",
+        "vehicle_id": "V-09",
+        "operator_id": 7
+      },
+      {
+        "source_line": 4293,
+        "trip_id": "TRIP_019",
+        "vehicle_id": "V-09",
+        "operator_id": 7
+      },
+      {
+        "source_line": 4294,
+        "trip_id": "TRIP_019",
+        "vehicle_id": "V-09",
+        "operator_id": 7
+      },
+      {
+        "source_line": 4295,
+        "trip_id": "TRIP_019",
+        "vehicle_id": "V-09",
+        "operator_id": 7
+      },
+      {
+        "source_line": 4296,
+        "trip_id": "TRIP_019",
+        "vehicle_id": "V-09",
+        "operator_id": 7
+      },
+      {
+        "source_line": 4297,
+        "trip_id": "TRIP_019",
+        "vehicle_id": "V-09",
+        "operator_id": 7
+      },
+      {
+        "source_line": 4298,
+        "trip_id": "TRIP_019",
+        "vehicle_id": "V-09",
+        "operator_id": 7
+      },
+      {
+        "source_line": 4299,
+        "trip_id": "TRIP_019",
+        "vehicle_id": "V-09",
+        "operator_id": 7
+      },
+      {
+        "source_line": 4300,
+        "trip_id": "TRIP_019",
+        "vehicle_id": "V-09",
+        "operator_id": 7
+      },
+      {
+        "source_line": 4301,
+        "trip_id": "TRIP_019",
+        "vehicle_id": "V-09",
+        "operator_id": 7
+      },
+      {
+        "source_line": 4302,
+        "trip_id": "TRIP_019",
+        "vehicle_id": "V-09",
+        "operator_id": 7
+      },
+      {
+        "source_line": 4303,
+        "trip_id": "TRIP_019",
+        "vehicle_id": "V-09",
+        "operator_id": 7
+      },
+      {
+        "source_line": 4304,
+        "trip_id": "TRIP_019",
+        "vehicle_id": "V-09",
+        "operator_id": 7
+      },
+      {
+        "source_line": 4305,
+        "trip_id": "TRIP_019",
+        "vehicle_id": "V-09",
+        "operator_id": 7
+      },
+      {
+        "source_line": 4306,
+        "trip_id": "TRIP_019",
+        "vehicle_id": "V-09",
+        "operator_id": 7
+      },
+      {
+        "source_line": 4307,
+        "trip_id": "TRIP_019",
+        "vehicle_id": "V-09",
+        "operator_id": 7
+      },
+      {
+        "source_line": 4308,
+        "trip_id": "TRIP_019",
+        "vehicle_id": "V-09",
+        "operator_id": 7
+      },
+      {
+        "source_line": 4309,
+        "trip_id": "TRIP_019",
+        "vehicle_id": "V-09",
+        "operator_id": 7
+      },
+      {
+        "source_line": 4310,
+        "trip_id": "TRIP_019",
+        "vehicle_id": "V-09",
+        "operator_id": 7
+      },
+      {
+        "source_line": 4311,
+        "trip_id": "TRIP_019",
+        "vehicle_id": "V-09",
+        "operator_id": 7
+      },
+      {
+        "source_line": 4312,
+        "trip_id": "TRIP_019",
+        "vehicle_id": "V-09",
+        "operator_id": 7
+      },
+      {
+        "source_line": 4313,
+        "trip_id": "TRIP_019",
+        "vehicle_id": "V-09",
+        "operator_id": 7
+      },
+      {
+        "source_line": 4314,
+        "trip_id": "TRIP_019",
+        "vehicle_id": "V-09",
+        "operator_id": 7
+      },
+      {
+        "source_line": 4315,
+        "trip_id": "TRIP_019",
+        "vehicle_id": "V-09",
+        "operator_id": 7
+      },
+      {
+        "source_line": 4316,
+        "trip_id": "TRIP_019",
+        "vehicle_id": "V-09",
+        "operator_id": 7
+      },
+      {
+        "source_line": 4317,
+        "trip_id": "TRIP_019",
+        "vehicle_id": "V-09",
+        "operator_id": 7
+      },
+      {
+        "source_line": 4318,
+        "trip_id": "TRIP_019",
+        "vehicle_id": "V-09",
+        "operator_id": 7
+      },
+      {
+        "source_line": 4319,
+        "trip_id": "TRIP_019",
+        "vehicle_id": "V-09",
+        "operator_id": 7
+      },
+      {
+        "source_line": 4320,
+        "trip_id": "TRIP_019",
+        "vehicle_id": "V-09",
+        "operator_id": 7
+      },
+      {
+        "source_line": 4321,
+        "trip_id": "TRIP_019",
+        "vehicle_id": "V-09",
+        "operator_id": 7
+      },
+      {
+        "source_line": 4322,
+        "trip_id": "TRIP_019",
+        "vehicle_id": "V-09",
+        "operator_id": 7
+      },
+      {
+        "source_line": 4323,
+        "trip_id": "TRIP_019",
+        "vehicle_id": "V-09",
+        "operator_id": 7
+      },
+      {
+        "source_line": 4324,
+        "trip_id": "TRIP_019",
+        "vehicle_id": "V-09",
+        "operator_id": 7
+      }
+    ],
+    "location_warnings": [],
+    "available_rows": 3814,
+    "retained_rows": 3769
+  },
+  "routes": [
+    {
+      "route": 9,
+      "route_name": "Thane \u2192 Powai",
+      "verdict": "HOLD",
+      "note": "Both references below materiality across all three observations. Scope: TRIP_013/V-11.",
+      "evaluated_trips": [
+        {
+          "trip_id": "TRIP_013",
+          "vehicle_id": "V-11",
+          "scheduled_start": "2026-06-17T06:50:00+05:30",
+          "scheduled_end": "2026-06-17T07:45:00+05:30",
+          "route_id": 9,
+          "bookings": {
+            "bookings": 12,
+            "unique_riders": 12,
+            "promise_warnings": [],
+            "invalid_bookings": [],
+            "count_caveat": "Bookings, not confirmed waiting riders; no boarding/cancellation events."
+          },
+          "latest": {
+            "source_line": 3265,
+            "raw": {
+              "ping_id": "P-0003264",
+              "vehicle_id": "V-11",
+              "operator_id": "5",
+              "lat": "19.120949",
+              "lon": "72.905864",
+              "speed_kmph": "14.8",
+              "recorded_at": "2026-06-17 07:44:42+05:30",
+              "received_at": "2026-06-17 07:44:44+05:30"
+            },
+            "ping_id": "P-0003264",
+            "vehicle_id": "V-11",
+            "operator_id": 5,
+            "trip_id": "TRIP_013",
+            "route_id": 9,
+            "recorded_at": "2026-06-17T07:44:42+05:30",
+            "received_at": "2026-06-17T07:44:44+05:30",
+            "lat": 19.120949,
+            "lon": 72.905864,
+            "speed_kmph": 14.8,
+            "usable_speed_kmph": 14.8,
+            "progress_km": 13.292534711852754,
+            "offset_km": 0.003704663513004005,
+            "origin_distance_m": 13218.93238813976,
+            "elapsed_min": 54.7,
+            "event_age_s": 18.0,
+            "receipt_age_s": 16.0,
+            "position_uncertain": false
+          },
+          "observations": [
+            {
+              "gps": {
+                "source_line": 3263,
+                "raw": {
+                  "ping_id": "P-0003262",
+                  "vehicle_id": "V-11",
+                  "operator_id": "5",
+                  "lat": "19.122263",
+                  "lon": "72.906789",
+                  "speed_kmph": "17.1",
+                  "recorded_at": "2026-06-17 07:43:57+05:30",
+                  "received_at": "2026-06-17 07:44:00+05:30"
+                },
+                "ping_id": "P-0003262",
+                "vehicle_id": "V-11",
+                "operator_id": 5,
+                "trip_id": "TRIP_013",
+                "route_id": 9,
+                "recorded_at": "2026-06-17T07:43:57+05:30",
+                "received_at": "2026-06-17T07:44:00+05:30",
+                "lat": 19.122263,
+                "lon": 72.906789,
+                "speed_kmph": 17.1,
+                "usable_speed_kmph": 17.1,
+                "progress_km": 13.11709105434731,
+                "offset_km": 0.0062130866179735565,
+                "origin_distance_m": 13043.507344603824,
+                "elapsed_min": 53.95,
+                "event_age_s": 63.0,
+                "receipt_age_s": 60.0,
+                "position_uncertain": false
+              },
+              "references": {
+                "2026-06-15": {
+                  "elapsed_min": 55.32663989336617,
+                  "fraction": 0.5271997091804619,
+                  "gap_s": 22.0,
+                  "forward_crossings": 1,
+                  "lower": {
+                    "source_line": 166,
+                    "raw": {
+                      "ping_id": "P-0000165",
+                      "vehicle_id": "V-11",
+                      "operator_id": "5",
+                      "lat": "19.122642",
+                      "lon": "72.907097",
+                      "speed_kmph": "7.7",
+                      "recorded_at": "2026-06-15 07:49:08+05:30",
+                      "received_at": "2026-06-15 07:49:09+05:30"
+                    },
+                    "ping_id": "P-0000165",
+                    "vehicle_id": "V-11",
+                    "operator_id": 5,
+                    "trip_id": "TRIP_001",
+                    "route_id": 9,
+                    "recorded_at": "2026-06-15T07:49:08+05:30",
+                    "received_at": "2026-06-15T07:49:09+05:30",
+                    "lat": 19.122642,
+                    "lon": 72.907097,
+                    "speed_kmph": 7.7,
+                    "usable_speed_kmph": 7.7,
+                    "progress_km": 13.064040203761982,
+                    "offset_km": 0.003367849024569375,
+                    "origin_distance_m": 12990.424872323832,
+                    "elapsed_min": 55.13333333333333,
+                    "event_age_s": 172552.0,
+                    "receipt_age_s": 172551.0,
+                    "position_uncertain": false
+                  },
+                  "upper": {
+                    "source_line": 167,
+                    "raw": {
+                      "ping_id": "P-0000166",
+                      "vehicle_id": "V-11",
+                      "operator_id": "5",
+                      "lat": "19.121899",
+                      "lon": "72.90655",
+                      "speed_kmph": "19.4",
+                      "recorded_at": "2026-06-15 07:49:30+05:30",
+                      "received_at": "2026-06-15 07:49:32+05:30"
+                    },
+                    "ping_id": "P-0000166",
+                    "vehicle_id": "V-11",
+                    "operator_id": 5,
+                    "trip_id": "TRIP_001",
+                    "route_id": 9,
+                    "recorded_at": "2026-06-15T07:49:30+05:30",
+                    "received_at": "2026-06-15T07:49:32+05:30",
+                    "lat": 19.121899,
+                    "lon": 72.90655,
+                    "speed_kmph": 19.4,
+                    "usable_speed_kmph": 19.4,
+                    "progress_km": 13.164667821079517,
+                    "offset_km": 0.004024844374462049,
+                    "origin_distance_m": 13091.063302509616,
+                    "elapsed_min": 55.5,
+                    "event_age_s": 172530.0,
+                    "receipt_age_s": 172528.0,
+                    "position_uncertain": false
+                  }
+                },
+                "2026-06-16": {
+                  "elapsed_min": 54.65533414800419,
+                  "fraction": 0.2541205223677152,
+                  "gap_s": 17.0,
+                  "forward_crossings": 1,
+                  "lower": {
+                    "source_line": 1718,
+                    "raw": {
+                      "ping_id": "P-0001717",
+                      "vehicle_id": "V-11",
+                      "operator_id": "5",
+                      "lat": "19.122322",
+                      "lon": "72.906954",
+                      "speed_kmph": "15.0",
+                      "recorded_at": "2026-06-16 07:39:35+05:30",
+                      "received_at": "2026-06-16 07:39:37+05:30"
+                    },
+                    "ping_id": "P-0001717",
+                    "vehicle_id": "V-11",
+                    "operator_id": 5,
+                    "trip_id": "TRIP_007",
+                    "route_id": 9,
+                    "recorded_at": "2026-06-16T07:39:35+05:30",
+                    "received_at": "2026-06-16T07:39:37+05:30",
+                    "lat": 19.122322,
+                    "lon": 72.906954,
+                    "speed_kmph": 15.0,
+                    "usable_speed_kmph": 15.0,
+                    "progress_km": 13.101879687501723,
+                    "offset_km": 0.004368923747589528,
+                    "origin_distance_m": 13028.188698498761,
+                    "elapsed_min": 54.583333333333336,
+                    "event_age_s": 86725.0,
+                    "receipt_age_s": 86723.0,
+                    "position_uncertain": false
+                  },
+                  "upper": {
+                    "source_line": 1719,
+                    "raw": {
+                      "ping_id": "P-0001718",
+                      "vehicle_id": "V-11",
+                      "operator_id": "5",
+                      "lat": "19.121872",
+                      "lon": "72.906641",
+                      "speed_kmph": "12.4",
+                      "recorded_at": "2026-06-16 07:39:52+05:30",
+                      "received_at": "2026-06-16 07:39:54+05:30"
+                    },
+                    "ping_id": "P-0001718",
+                    "vehicle_id": "V-11",
+                    "operator_id": 5,
+                    "trip_id": "TRIP_007",
+                    "route_id": 9,
+                    "recorded_at": "2026-06-16T07:39:52+05:30",
+                    "received_at": "2026-06-16T07:39:54+05:30",
+                    "lat": 19.121872,
+                    "lon": 72.906641,
+                    "speed_kmph": 12.4,
+                    "usable_speed_kmph": 12.4,
+                    "progress_km": 13.161738555663401,
+                    "offset_km": 0.005555466685007649,
+                    "origin_distance_m": 13088.038988755088,
+                    "elapsed_min": 54.86666666666667,
+                    "event_age_s": 86708.0,
+                    "receipt_age_s": 86706.0,
+                    "position_uncertain": false
+                  }
+                }
+              },
+              "deficits": {
+                "2026-06-15": -1.3766398933661677,
+                "2026-06-16": -0.7053341480041837
+              },
+              "median_deficit": -1.0409870206851757,
+              "timetable_crosscheck": 0.344793115079014,
+              "position_sensitivity": [
+                {
+                  "shift_m": -100.0,
+                  "deficits": {
+                    "2026-06-15": -0.9142575756668592,
+                    "2026-06-16": -0.2988702750301684
+                  }
+                },
+                {
+                  "shift_m": 100.0,
+                  "deficits": {
+                    "2026-06-15": -1.743819006396933,
+                    "2026-06-16": -1.1286540366173625
+                  }
+                }
+              ]
+            },
+            {
+              "gps": {
+                "source_line": 3264,
+                "raw": {
+                  "ping_id": "P-0003263",
+                  "vehicle_id": "V-11",
+                  "operator_id": "5",
+                  "lat": "19.121516",
+                  "lon": "72.906361",
+                  "speed_kmph": "17.8",
+                  "recorded_at": "2026-06-17 07:44:19+05:30",
+                  "received_at": "2026-06-17 07:44:21+05:30"
+                },
+                "ping_id": "P-0003263",
+                "vehicle_id": "V-11",
+                "operator_id": 5,
+                "trip_id": "TRIP_013",
+                "route_id": 9,
+                "recorded_at": "2026-06-17T07:44:19+05:30",
+                "received_at": "2026-06-17T07:44:21+05:30",
+                "lat": 19.121516,
+                "lon": 72.906361,
+                "speed_kmph": 17.8,
+                "usable_speed_kmph": 17.8,
+                "progress_km": 13.211017035691373,
+                "offset_km": 0.003689213307818947,
+                "origin_distance_m": 13137.337748899648,
+                "elapsed_min": 54.31666666666667,
+                "event_age_s": 41.0,
+                "receipt_age_s": 39.0,
+                "position_uncertain": false
+              },
+              "references": {
+                "2026-06-15": {
+                  "elapsed_min": 55.67136216450937,
+                  "fraction": 0.5712072150312391,
+                  "gap_s": 18.0,
+                  "forward_crossings": 1,
+                  "lower": {
+                    "source_line": 167,
+                    "raw": {
+                      "ping_id": "P-0000166",
+                      "vehicle_id": "V-11",
+                      "operator_id": "5",
+                      "lat": "19.121899",
+                      "lon": "72.90655",
+                      "speed_kmph": "19.4",
+                      "recorded_at": "2026-06-15 07:49:30+05:30",
+                      "received_at": "2026-06-15 07:49:32+05:30"
+                    },
+                    "ping_id": "P-0000166",
+                    "vehicle_id": "V-11",
+                    "operator_id": 5,
+                    "trip_id": "TRIP_001",
+                    "route_id": 9,
+                    "recorded_at": "2026-06-15T07:49:30+05:30",
+                    "received_at": "2026-06-15T07:49:32+05:30",
+                    "lat": 19.121899,
+                    "lon": 72.90655,
+                    "speed_kmph": 19.4,
+                    "usable_speed_kmph": 19.4,
+                    "progress_km": 13.164667821079517,
+                    "offset_km": 0.004024844374462049,
+                    "origin_distance_m": 13091.063302509616,
+                    "elapsed_min": 55.5,
+                    "event_age_s": 172530.0,
+                    "receipt_age_s": 172528.0,
+                    "position_uncertain": false
+                  },
+                  "upper": {
+                    "source_line": 168,
+                    "raw": {
+                      "ping_id": "P-0000167",
+                      "vehicle_id": "V-11",
+                      "operator_id": "5",
+                      "lat": "19.121305",
+                      "lon": "72.906101",
+                      "speed_kmph": "14.4",
+                      "recorded_at": "2026-06-15 07:49:48+05:30",
+                      "received_at": "2026-06-15 07:49:49+05:30"
+                    },
+                    "ping_id": "P-0000167",
+                    "vehicle_id": "V-11",
+                    "operator_id": 5,
+                    "trip_id": "TRIP_001",
+                    "route_id": 9,
+                    "recorded_at": "2026-06-15T07:49:48+05:30",
+                    "received_at": "2026-06-15T07:49:49+05:30",
+                    "lat": 19.121305,
+                    "lon": 72.906101,
+                    "speed_kmph": 14.4,
+                    "usable_speed_kmph": 14.4,
+                    "progress_km": 13.245810379142831,
+                    "offset_km": 0.005563060295247043,
+                    "origin_distance_m": 13172.225070344779,
+                    "elapsed_min": 55.8,
+                    "event_age_s": 172512.0,
+                    "receipt_age_s": 172511.0,
+                    "position_uncertain": false
+                  }
+                },
+                "2026-06-16": {
+                  "elapsed_min": 55.05539193878044,
+                  "fraction": 0.49232679681853964,
+                  "gap_s": 23.0,
+                  "forward_crossings": 1,
+                  "lower": {
+                    "source_line": 1719,
+                    "raw": {
+                      "ping_id": "P-0001718",
+                      "vehicle_id": "V-11",
+                      "operator_id": "5",
+                      "lat": "19.121872",
+                      "lon": "72.906641",
+                      "speed_kmph": "12.4",
+                      "recorded_at": "2026-06-16 07:39:52+05:30",
+                      "received_at": "2026-06-16 07:39:54+05:30"
+                    },
+                    "ping_id": "P-0001718",
+                    "vehicle_id": "V-11",
+                    "operator_id": 5,
+                    "trip_id": "TRIP_007",
+                    "route_id": 9,
+                    "recorded_at": "2026-06-16T07:39:52+05:30",
+                    "received_at": "2026-06-16T07:39:54+05:30",
+                    "lat": 19.121872,
+                    "lon": 72.906641,
+                    "speed_kmph": 12.4,
+                    "usable_speed_kmph": 12.4,
+                    "progress_km": 13.161738555663401,
+                    "offset_km": 0.005555466685007649,
+                    "origin_distance_m": 13088.038988755088,
+                    "elapsed_min": 54.86666666666667,
+                    "event_age_s": 86708.0,
+                    "receipt_age_s": 86706.0,
+                    "position_uncertain": false
+                  },
+                  "upper": {
+                    "source_line": 1720,
+                    "raw": {
+                      "ping_id": "P-0001719",
+                      "vehicle_id": "V-11",
+                      "operator_id": "5",
+                      "lat": "19.121129",
+                      "lon": "72.906103",
+                      "speed_kmph": "16.7",
+                      "recorded_at": "2026-06-16 07:40:15+05:30",
+                      "received_at": "2026-06-16 07:40:17+05:30"
+                    },
+                    "ping_id": "P-0001719",
+                    "vehicle_id": "V-11",
+                    "operator_id": 5,
+                    "trip_id": "TRIP_007",
+                    "route_id": 9,
+                    "recorded_at": "2026-06-16T07:40:15+05:30",
+                    "received_at": "2026-06-16T07:40:17+05:30",
+                    "lat": 19.121129,
+                    "lon": 72.906103,
+                    "speed_kmph": 16.7,
+                    "usable_speed_kmph": 16.7,
+                    "progress_km": 13.261831584006393,
+                    "offset_km": 0.0056780492765566275,
+                    "origin_distance_m": 13188.135794022031,
+                    "elapsed_min": 55.25,
+                    "event_age_s": 86685.0,
+                    "receipt_age_s": 86683.0,
+                    "position_uncertain": false
+                  }
+                }
+              },
+              "deficits": {
+                "2026-06-15": -1.3546954978426982,
+                "2026-06-16": -0.7387252721137685
+              },
+              "median_deficit": -1.0467103849782333,
+              "timetable_crosscheck": 0.3276154033726897,
+              "position_sensitivity": [
+                {
+                  "shift_m": -100.0,
+                  "deficits": {
+                    "2026-06-15": -0.987840732328543,
+                    "2026-06-16": -0.3099169886307962
+                  }
+                },
+                {
+                  "shift_m": 100.0,
+                  "deficits": {
+                    "2026-06-15": -1.763079425689412,
+                    "2026-06-16": -1.1573589766815076
+                  }
+                }
+              ]
+            },
+            {
+              "gps": {
+                "source_line": 3265,
+                "raw": {
+                  "ping_id": "P-0003264",
+                  "vehicle_id": "V-11",
+                  "operator_id": "5",
+                  "lat": "19.120949",
+                  "lon": "72.905864",
+                  "speed_kmph": "14.8",
+                  "recorded_at": "2026-06-17 07:44:42+05:30",
+                  "received_at": "2026-06-17 07:44:44+05:30"
+                },
+                "ping_id": "P-0003264",
+                "vehicle_id": "V-11",
+                "operator_id": 5,
+                "trip_id": "TRIP_013",
+                "route_id": 9,
+                "recorded_at": "2026-06-17T07:44:42+05:30",
+                "received_at": "2026-06-17T07:44:44+05:30",
+                "lat": 19.120949,
+                "lon": 72.905864,
+                "speed_kmph": 14.8,
+                "usable_speed_kmph": 14.8,
+                "progress_km": 13.292534711852754,
+                "offset_km": 0.003704663513004005,
+                "origin_distance_m": 13218.93238813976,
+                "elapsed_min": 54.7,
+                "event_age_s": 18.0,
+                "receipt_age_s": 16.0,
+                "position_uncertain": false
+              },
+              "references": {
+                "2026-06-15": {
+                  "elapsed_min": 56.000454220249985,
+                  "fraction": 0.6013626607499498,
+                  "gap_s": 20.0,
+                  "forward_crossings": 1,
+                  "lower": {
+                    "source_line": 168,
+                    "raw": {
+                      "ping_id": "P-0000167",
+                      "vehicle_id": "V-11",
+                      "operator_id": "5",
+                      "lat": "19.121305",
+                      "lon": "72.906101",
+                      "speed_kmph": "14.4",
+                      "recorded_at": "2026-06-15 07:49:48+05:30",
+                      "received_at": "2026-06-15 07:49:49+05:30"
+                    },
+                    "ping_id": "P-0000167",
+                    "vehicle_id": "V-11",
+                    "operator_id": 5,
+                    "trip_id": "TRIP_001",
+                    "route_id": 9,
+                    "recorded_at": "2026-06-15T07:49:48+05:30",
+                    "received_at": "2026-06-15T07:49:49+05:30",
+                    "lat": 19.121305,
+                    "lon": 72.906101,
+                    "speed_kmph": 14.4,
+                    "usable_speed_kmph": 14.4,
+                    "progress_km": 13.245810379142831,
+                    "offset_km": 0.005563060295247043,
+                    "origin_distance_m": 13172.225070344779,
+                    "elapsed_min": 55.8,
+                    "event_age_s": 172512.0,
+                    "receipt_age_s": 172511.0,
+                    "position_uncertain": false
+                  },
+                  "upper": {
+                    "source_line": 169,
+                    "raw": {
+                      "ping_id": "P-0000168",
+                      "vehicle_id": "V-11",
+                      "operator_id": "5",
+                      "lat": "19.120711",
+                      "lon": "72.90571",
+                      "speed_kmph": "12.6",
+                      "recorded_at": "2026-06-15 07:50:08+05:30",
+                      "received_at": "2026-06-15 07:50:09+05:30"
+                    },
+                    "ping_id": "P-0000168",
+                    "vehicle_id": "V-11",
+                    "operator_id": 5,
+                    "trip_id": "TRIP_001",
+                    "route_id": 9,
+                    "recorded_at": "2026-06-15T07:50:08+05:30",
+                    "received_at": "2026-06-15T07:50:09+05:30",
+                    "lat": 19.120711,
+                    "lon": 72.90571,
+                    "speed_kmph": 12.6,
+                    "usable_speed_kmph": 12.6,
+                    "progress_km": 13.32350780826431,
+                    "offset_km": 0.0020773294876880234,
+                    "origin_distance_m": 13249.890487298584,
+                    "elapsed_min": 56.13333333333333,
+                    "event_age_s": 172492.0,
+                    "receipt_age_s": 172491.0,
+                    "position_uncertain": false
+                  }
+                },
+                "2026-06-16": {
+                  "elapsed_min": 55.38984395248897,
+                  "fraction": 0.38139259769717354,
+                  "gap_s": 22.0,
+                  "forward_crossings": 1,
+                  "lower": {
+                    "source_line": 1720,
+                    "raw": {
+                      "ping_id": "P-0001719",
+                      "vehicle_id": "V-11",
+                      "operator_id": "5",
+                      "lat": "19.121129",
+                      "lon": "72.906103",
+                      "speed_kmph": "16.7",
+                      "recorded_at": "2026-06-16 07:40:15+05:30",
+                      "received_at": "2026-06-16 07:40:17+05:30"
+                    },
+                    "ping_id": "P-0001719",
+                    "vehicle_id": "V-11",
+                    "operator_id": 5,
+                    "trip_id": "TRIP_007",
+                    "route_id": 9,
+                    "recorded_at": "2026-06-16T07:40:15+05:30",
+                    "received_at": "2026-06-16T07:40:17+05:30",
+                    "lat": 19.121129,
+                    "lon": 72.906103,
+                    "speed_kmph": 16.7,
+                    "usable_speed_kmph": 16.7,
+                    "progress_km": 13.261831584006393,
+                    "offset_km": 0.0056780492765566275,
+                    "origin_distance_m": 13188.135794022031,
+                    "elapsed_min": 55.25,
+                    "event_age_s": 86685.0,
+                    "receipt_age_s": 86683.0,
+                    "position_uncertain": false
+                  },
+                  "upper": {
+                    "source_line": 1721,
+                    "raw": {
+                      "ping_id": "P-0001720",
+                      "vehicle_id": "V-11",
+                      "operator_id": "5",
+                      "lat": "19.120564",
+                      "lon": "72.90562",
+                      "speed_kmph": "12.6",
+                      "recorded_at": "2026-06-16 07:40:37+05:30",
+                      "received_at": "2026-06-16 07:40:40+05:30"
+                    },
+                    "ping_id": "P-0001720",
+                    "vehicle_id": "V-11",
+                    "operator_id": 5,
+                    "trip_id": "TRIP_007",
+                    "route_id": 9,
+                    "recorded_at": "2026-06-16T07:40:37+05:30",
+                    "received_at": "2026-06-16T07:40:40+05:30",
+                    "lat": 19.120564,
+                    "lon": 72.90562,
+                    "speed_kmph": 12.6,
+                    "usable_speed_kmph": 12.6,
+                    "progress_km": 13.342334268200437,
+                    "offset_km": 0.0006289219968476772,
+                    "origin_distance_m": 13268.703430319098,
+                    "elapsed_min": 55.61666666666667,
+                    "event_age_s": 86663.0,
+                    "receipt_age_s": 86660.0,
+                    "position_uncertain": false
+                  }
+                }
+              },
+              "deficits": {
+                "2026-06-15": -1.300454220249982,
+                "2026-06-16": -0.6898439524889639
+              },
+              "median_deficit": -0.995149086369473,
+              "timetable_crosscheck": 0.3778129921035287,
+              "position_sensitivity": [
+                {
+                  "shift_m": -100.0,
+                  "deficits": {
+                    "2026-06-15": -0.9030293773268525,
+                    "2026-06-16": -0.2846088790399932
+                  }
+                },
+                {
+                  "shift_m": 100.0,
+                  "deficits": {
+                    "2026-06-15": -1.7423629972804235,
+                    "2026-06-16": -1.1055254291324204
+                  }
+                }
+              ]
+            }
+          ],
+          "numerical_eligible": true,
+          "reference_trips": {
+            "2026-06-15": "TRIP_001",
+            "2026-06-16": "TRIP_007"
+          },
+          "verdict": "HOLD",
+          "reason": "Both references below materiality across all three observations",
+          "data_state": "fresh_credible",
+          "credible_rows": 161,
+          "operator_ids": [
+            5
+          ],
+          "origin_bound": false,
+          "origin_radius_max_m": 13218.93238813976,
+          "event_gaps_s": [
+            22.0,
+            23.0
+          ]
+        }
+      ],
+      "excluded_trips": [],
+      "booking_exposure": 12,
+      "excluded_bookings": 0,
+      "reporting_conflict": null
+    },
+    {
+      "route": 11,
+      "route_name": "Borivali \u2192 BKC",
+      "verdict": "CALL_DRIVER",
+      "note": "Direct verification takes precedence: Persistent origin-bound telemetry after departure; verify bus location and tracker assignment. Scope: TRIP_014/V-06.",
+      "evaluated_trips": [
+        {
+          "trip_id": "TRIP_014",
+          "vehicle_id": "V-06",
+          "scheduled_start": "2026-06-17T06:46:00+05:30",
+          "scheduled_end": "2026-06-17T07:56:00+05:30",
+          "route_id": 11,
+          "bookings": {
+            "bookings": 8,
+            "unique_riders": 8,
+            "promise_warnings": [],
+            "invalid_bookings": [],
+            "count_caveat": "Bookings, not confirmed waiting riders; no boarding/cancellation events."
+          },
+          "latest": {
+            "source_line": 3519,
+            "raw": {
+              "ping_id": "P-0003518",
+              "vehicle_id": "V-06",
+              "operator_id": "5",
+              "lat": "19.228892",
+              "lon": "72.856818",
+              "speed_kmph": "0.7",
+              "recorded_at": "2026-06-17 07:44:51+05:30",
+              "received_at": "2026-06-17 07:44:54+05:30"
+            },
+            "ping_id": "P-0003518",
+            "vehicle_id": "V-06",
+            "operator_id": 5,
+            "trip_id": "TRIP_014",
+            "route_id": 11,
+            "recorded_at": "2026-06-17T07:44:51+05:30",
+            "received_at": "2026-06-17T07:44:54+05:30",
+            "lat": 19.228892,
+            "lon": 72.856818,
+            "speed_kmph": 0.7,
+            "usable_speed_kmph": 0.7,
+            "progress_km": 0.013277781600547723,
+            "offset_km": 0.011025369553046319,
+            "origin_distance_m": 17.25410699894719,
+            "elapsed_min": 58.85,
+            "event_age_s": 9.0,
+            "receipt_age_s": 6.0,
+            "position_uncertain": false
+          },
+          "observations": [
+            {
+              "gps": {
+                "source_line": 3517,
+                "raw": {
+                  "ping_id": "P-0003516",
+                  "vehicle_id": "V-06",
+                  "operator_id": "5",
+                  "lat": "19.228907",
+                  "lon": "72.856643",
+                  "speed_kmph": "0.0",
+                  "recorded_at": "2026-06-17 07:44:10+05:30",
+                  "received_at": "2026-06-17 07:44:11+05:30"
+                },
+                "ping_id": "P-0003516",
+                "vehicle_id": "V-06",
+                "operator_id": 5,
+                "trip_id": "TRIP_014",
+                "route_id": 11,
+                "recorded_at": "2026-06-17T07:44:10+05:30",
+                "received_at": "2026-06-17T07:44:11+05:30",
+                "lat": 19.228907,
+                "lon": 72.856643,
+                "speed_kmph": 0.0,
+                "usable_speed_kmph": 0.0,
+                "progress_km": 0.009633816168095645,
+                "offset_km": 0.007069575644998064,
+                "origin_distance_m": 11.947939910781614,
+                "elapsed_min": 58.166666666666664,
+                "event_age_s": 50.0,
+                "receipt_age_s": 49.0,
+                "position_uncertain": false
+              },
+              "references": {},
+              "deficits": null,
+              "median_deficit": null,
+              "timetable_crosscheck": null
+            },
+            {
+              "gps": {
+                "source_line": 3518,
+                "raw": {
+                  "ping_id": "P-0003517",
+                  "vehicle_id": "V-06",
+                  "operator_id": "5",
+                  "lat": "19.229096",
+                  "lon": "72.856802",
+                  "speed_kmph": "0.2",
+                  "recorded_at": "2026-06-17 07:44:31+05:30",
+                  "received_at": "2026-06-17 07:44:35+05:30"
+                },
+                "ping_id": "P-0003517",
+                "vehicle_id": "V-06",
+                "operator_id": 5,
+                "trip_id": "TRIP_014",
+                "route_id": 11,
+                "recorded_at": "2026-06-17T07:44:31+05:30",
+                "received_at": "2026-06-17T07:44:35+05:30",
+                "lat": 19.229096,
+                "lon": 72.856802,
+                "speed_kmph": 0.2,
+                "usable_speed_kmph": 0.2,
+                "progress_km": 0.0,
+                "offset_km": 0.015124478956238993,
+                "origin_distance_m": 15.120668216897178,
+                "elapsed_min": 58.516666666666666,
+                "event_age_s": 29.0,
+                "receipt_age_s": 25.0,
+                "position_uncertain": false
+              },
+              "references": {},
+              "deficits": null,
+              "median_deficit": null,
+              "timetable_crosscheck": null
+            },
+            {
+              "gps": {
+                "source_line": 3519,
+                "raw": {
+                  "ping_id": "P-0003518",
+                  "vehicle_id": "V-06",
+                  "operator_id": "5",
+                  "lat": "19.228892",
+                  "lon": "72.856818",
+                  "speed_kmph": "0.7",
+                  "recorded_at": "2026-06-17 07:44:51+05:30",
+                  "received_at": "2026-06-17 07:44:54+05:30"
+                },
+                "ping_id": "P-0003518",
+                "vehicle_id": "V-06",
+                "operator_id": 5,
+                "trip_id": "TRIP_014",
+                "route_id": 11,
+                "recorded_at": "2026-06-17T07:44:51+05:30",
+                "received_at": "2026-06-17T07:44:54+05:30",
+                "lat": 19.228892,
+                "lon": 72.856818,
+                "speed_kmph": 0.7,
+                "usable_speed_kmph": 0.7,
+                "progress_km": 0.013277781600547723,
+                "offset_km": 0.011025369553046319,
+                "origin_distance_m": 17.25410699894719,
+                "elapsed_min": 58.85,
+                "event_age_s": 9.0,
+                "receipt_age_s": 6.0,
+                "position_uncertain": false
+              },
+              "references": {},
+              "deficits": null,
+              "median_deficit": null,
+              "timetable_crosscheck": null
+            }
+          ],
+          "numerical_eligible": false,
+          "reference_trips": {},
+          "verdict": "CALL_DRIVER",
+          "reason": "Persistent origin-bound telemetry after departure; verify bus location and tracker assignment",
+          "data_state": "origin_bound",
+          "credible_rows": 177,
+          "operator_ids": [
+            5
+          ],
+          "origin_bound": true,
+          "origin_radius_max_m": 17.586918329798305,
+          "event_gaps_s": [
+            21.0,
+            20.0
+          ]
+        }
+      ],
+      "excluded_trips": [],
+      "booking_exposure": 8,
+      "excluded_bookings": 0,
+      "reporting_conflict": null
+    },
+    {
+      "route": 12,
+      "route_name": "Mulund \u2192 Andheri E",
+      "verdict": "PUSH_LATE 9 min",
+      "note": "Both references at/above materiality across all three observations; rounded only after eligibility. Scope: TRIP_015/V-10. Operational evidence governs this row. HANDOFF.md rev. C requests contractual lateness=0; override not applied.",
+      "evaluated_trips": [
+        {
+          "trip_id": "TRIP_015",
+          "vehicle_id": "V-10",
+          "scheduled_start": "2026-06-17T07:05:00+05:30",
+          "scheduled_end": "2026-06-17T08:05:00+05:30",
+          "route_id": 12,
+          "bookings": {
+            "bookings": 9,
+            "unique_riders": 9,
+            "promise_warnings": [],
+            "invalid_bookings": [],
+            "count_caveat": "Bookings, not confirmed waiting riders; no boarding/cancellation events."
+          },
+          "latest": {
+            "source_line": 3625,
+            "raw": {
+              "ping_id": "P-0003624",
+              "vehicle_id": "V-10",
+              "operator_id": "5",
+              "lat": "19.141519",
+              "lon": "72.915351",
+              "speed_kmph": "10.2",
+              "recorded_at": "2026-06-17 07:44:51+05:30",
+              "received_at": "2026-06-17 07:44:53+05:30"
+            },
+            "ping_id": "P-0003624",
+            "vehicle_id": "V-10",
+            "operator_id": 5,
+            "trip_id": "TRIP_015",
+            "route_id": 12,
+            "recorded_at": "2026-06-17T07:44:51+05:30",
+            "received_at": "2026-06-17T07:44:53+05:30",
+            "lat": 19.141519,
+            "lon": 72.915351,
+            "speed_kmph": 10.2,
+            "usable_speed_kmph": 10.2,
+            "progress_km": 5.671298932671393,
+            "offset_km": 0.00822849289678628,
+            "origin_distance_m": 5558.676179789045,
+            "elapsed_min": 39.85,
+            "event_age_s": 9.0,
+            "receipt_age_s": 7.0,
+            "position_uncertain": false
+          },
+          "observations": [
+            {
+              "gps": {
+                "source_line": 3623,
+                "raw": {
+                  "ping_id": "P-0003622",
+                  "vehicle_id": "V-10",
+                  "operator_id": "5",
+                  "lat": "19.141919",
+                  "lon": "72.91631",
+                  "speed_kmph": "11.6",
+                  "recorded_at": "2026-06-17 07:44:12+05:30",
+                  "received_at": "2026-06-17 07:44:16+05:30"
+                },
+                "ping_id": "P-0003622",
+                "vehicle_id": "V-10",
+                "operator_id": 5,
+                "trip_id": "TRIP_015",
+                "route_id": 12,
+                "recorded_at": "2026-06-17T07:44:12+05:30",
+                "received_at": "2026-06-17T07:44:16+05:30",
+                "lat": 19.141919,
+                "lon": 72.91631,
+                "speed_kmph": 11.6,
+                "usable_speed_kmph": 11.6,
+                "progress_km": 5.562323831265742,
+                "offset_km": 0.0076197171861690245,
+                "origin_distance_m": 5452.1945683797785,
+                "elapsed_min": 39.2,
+                "event_age_s": 48.0,
+                "receipt_age_s": 44.0,
+                "position_uncertain": false
+              },
+              "references": {
+                "2026-06-15": {
+                  "elapsed_min": 30.39810503208091,
+                  "fraction": 0.894315096242731,
+                  "gap_s": 20.0,
+                  "forward_crossings": 1,
+                  "lower": {
+                    "source_line": 617,
+                    "raw": {
+                      "ping_id": "P-0000616",
+                      "vehicle_id": "V-10",
+                      "operator_id": "5",
+                      "lat": "19.142317",
+                      "lon": "72.916795",
+                      "speed_kmph": "10.0",
+                      "recorded_at": "2026-06-15 07:38:06+05:30",
+                      "received_at": "2026-06-15 07:38:09+05:30"
+                    },
+                    "ping_id": "P-0000616",
+                    "vehicle_id": "V-10",
+                    "operator_id": 5,
+                    "trip_id": "TRIP_003",
+                    "route_id": 12,
+                    "recorded_at": "2026-06-15T07:38:06+05:30",
+                    "received_at": "2026-06-15T07:38:09+05:30",
+                    "lat": 19.142317,
+                    "lon": 72.916795,
+                    "speed_kmph": 10.0,
+                    "usable_speed_kmph": 10.0,
+                    "progress_km": 5.495648321083252,
+                    "offset_km": 0.0028006200003280798,
+                    "origin_distance_m": 5384.761675517897,
+                    "elapsed_min": 30.1,
+                    "event_age_s": 173214.0,
+                    "receipt_age_s": 173211.0,
+                    "position_uncertain": false
+                  },
+                  "upper": {
+                    "source_line": 618,
+                    "raw": {
+                      "ping_id": "P-0000617",
+                      "vehicle_id": "V-10",
+                      "operator_id": "5",
+                      "lat": "19.141995",
+                      "lon": "72.916171",
+                      "speed_kmph": "11.5",
+                      "recorded_at": "2026-06-15 07:38:26+05:30",
+                      "received_at": "2026-06-15 07:38:30+05:30"
+                    },
+                    "ping_id": "P-0000617",
+                    "vehicle_id": "V-10",
+                    "operator_id": 5,
+                    "trip_id": "TRIP_003",
+                    "route_id": 12,
+                    "recorded_at": "2026-06-15T07:38:26+05:30",
+                    "received_at": "2026-06-15T07:38:30+05:30",
+                    "lat": 19.141995,
+                    "lon": 72.916171,
+                    "speed_kmph": 11.5,
+                    "usable_speed_kmph": 11.5,
+                    "progress_km": 5.570203151324419,
+                    "offset_km": 0.007297889749668229,
+                    "origin_distance_m": 5458.317345575247,
+                    "elapsed_min": 30.433333333333334,
+                    "event_age_s": 173194.0,
+                    "receipt_age_s": 173190.0,
+                    "position_uncertain": false
+                  }
+                },
+                "2026-06-16": {
+                  "elapsed_min": 30.0955251140183,
+                  "fraction": 0.8865753420549053,
+                  "gap_s": 20.0,
+                  "forward_crossings": 1,
+                  "lower": {
+                    "source_line": 2166,
+                    "raw": {
+                      "ping_id": "P-0002165",
+                      "vehicle_id": "V-10",
+                      "operator_id": "5",
+                      "lat": "19.142314",
+                      "lon": "72.916622",
+                      "speed_kmph": "9.2",
+                      "recorded_at": "2026-06-16 07:31:48+05:30",
+                      "received_at": "2026-06-16 07:31:50+05:30"
+                    },
+                    "ping_id": "P-0002165",
+                    "vehicle_id": "V-10",
+                    "operator_id": 5,
+                    "trip_id": "TRIP_009",
+                    "route_id": 12,
+                    "recorded_at": "2026-06-16T07:31:48+05:30",
+                    "received_at": "2026-06-16T07:31:50+05:30",
+                    "lat": 19.142314,
+                    "lon": 72.916622,
+                    "speed_kmph": 9.2,
+                    "usable_speed_kmph": 9.2,
+                    "progress_km": 5.511220901285608,
+                    "offset_km": 0.012174249514668679,
+                    "origin_distance_m": 5399.161795770558,
+                    "elapsed_min": 29.8,
+                    "event_age_s": 87192.0,
+                    "receipt_age_s": 87190.0,
+                    "position_uncertain": false
+                  },
+                  "upper": {
+                    "source_line": 2167,
+                    "raw": {
+                      "ping_id": "P-0002166",
+                      "vehicle_id": "V-10",
+                      "operator_id": "5",
+                      "lat": "19.141968",
+                      "lon": "72.916204",
+                      "speed_kmph": "11.3",
+                      "recorded_at": "2026-06-16 07:32:08+05:30",
+                      "received_at": "2026-06-16 07:32:11+05:30"
+                    },
+                    "ping_id": "P-0002166",
+                    "vehicle_id": "V-10",
+                    "operator_id": 5,
+                    "trip_id": "TRIP_009",
+                    "route_id": 12,
+                    "recorded_at": "2026-06-16T07:32:08+05:30",
+                    "received_at": "2026-06-16T07:32:11+05:30",
+                    "lat": 19.141968,
+                    "lon": 72.916204,
+                    "speed_kmph": 11.3,
+                    "usable_speed_kmph": 11.3,
+                    "progress_km": 5.5688617215927545,
+                    "offset_km": 0.002912573396348443,
+                    "origin_distance_m": 5457.481268645685,
+                    "elapsed_min": 30.133333333333333,
+                    "event_age_s": 87172.0,
+                    "receipt_age_s": 87169.0,
+                    "position_uncertain": false
+                  }
+                }
+              },
+              "deficits": {
+                "2026-06-15": 8.801894967919093,
+                "2026-06-16": 9.104474885981702
+              },
+              "median_deficit": 8.953184926950398,
+              "timetable_crosscheck": 9.95803560903489,
+              "position_sensitivity": [
+                {
+                  "shift_m": -100.0,
+                  "deficits": {
+                    "2026-06-15": 9.368051563956215,
+                    "2026-06-16": 9.738988364738816
+                  }
+                },
+                {
+                  "shift_m": 100.0,
+                  "deficits": {
+                    "2026-06-15": 8.332276126686804,
+                    "2026-06-16": 8.579985309622899
+                  }
+                }
+              ]
+            },
+            {
+              "gps": {
+                "source_line": 3624,
+                "raw": {
+                  "ping_id": "P-0003623",
+                  "vehicle_id": "V-10",
+                  "operator_id": "5",
+                  "lat": "19.141753",
+                  "lon": "72.915771",
+                  "speed_kmph": "9.8",
+                  "recorded_at": "2026-06-17 07:44:31+05:30",
+                  "received_at": "2026-06-17 07:44:33+05:30"
+                },
+                "ping_id": "P-0003623",
+                "vehicle_id": "V-10",
+                "operator_id": 5,
+                "trip_id": "TRIP_015",
+                "route_id": 12,
+                "recorded_at": "2026-06-17T07:44:31+05:30",
+                "received_at": "2026-06-17T07:44:33+05:30",
+                "lat": 19.141753,
+                "lon": 72.915771,
+                "speed_kmph": 9.8,
+                "usable_speed_kmph": 9.8,
+                "progress_km": 5.620097472116305,
+                "offset_km": 0.006828231306308411,
+                "origin_distance_m": 5507.948448361437,
+                "elapsed_min": 39.516666666666666,
+                "event_age_s": 29.0,
+                "receipt_age_s": 27.0,
+                "position_uncertain": false
+              },
+              "references": {
+                "2026-06-15": {
+                  "elapsed_min": 30.651761437644335,
+                  "fraction": 0.6897729609821167,
+                  "gap_s": 19.0,
+                  "forward_crossings": 1,
+                  "lower": {
+                    "source_line": 618,
+                    "raw": {
+                      "ping_id": "P-0000617",
+                      "vehicle_id": "V-10",
+                      "operator_id": "5",
+                      "lat": "19.141995",
+                      "lon": "72.916171",
+                      "speed_kmph": "11.5",
+                      "recorded_at": "2026-06-15 07:38:26+05:30",
+                      "received_at": "2026-06-15 07:38:30+05:30"
+                    },
+                    "ping_id": "P-0000617",
+                    "vehicle_id": "V-10",
+                    "operator_id": 5,
+                    "trip_id": "TRIP_003",
+                    "route_id": 12,
+                    "recorded_at": "2026-06-15T07:38:26+05:30",
+                    "received_at": "2026-06-15T07:38:30+05:30",
+                    "lat": 19.141995,
+                    "lon": 72.916171,
+                    "speed_kmph": 11.5,
+                    "usable_speed_kmph": 11.5,
+                    "progress_km": 5.570203151324419,
+                    "offset_km": 0.007297889749668229,
+                    "origin_distance_m": 5458.317345575247,
+                    "elapsed_min": 30.433333333333334,
+                    "event_age_s": 173194.0,
+                    "receipt_age_s": 173190.0,
+                    "position_uncertain": false
+                  },
+                  "upper": {
+                    "source_line": 619,
+                    "raw": {
+                      "ping_id": "P-0000618",
+                      "vehicle_id": "V-10",
+                      "operator_id": "5",
+                      "lat": "19.141569",
+                      "lon": "72.915641",
+                      "speed_kmph": "12.2",
+                      "recorded_at": "2026-06-15 07:38:45+05:30",
+                      "received_at": "2026-06-15 07:38:47+05:30"
+                    },
+                    "ping_id": "P-0000618",
+                    "vehicle_id": "V-10",
+                    "operator_id": 5,
+                    "trip_id": "TRIP_003",
+                    "route_id": 12,
+                    "recorded_at": "2026-06-15T07:38:45+05:30",
+                    "received_at": "2026-06-15T07:38:47+05:30",
+                    "lat": 19.141569,
+                    "lon": 72.915641,
+                    "speed_kmph": 12.2,
+                    "usable_speed_kmph": 12.2,
+                    "progress_km": 5.642537562230936,
+                    "offset_km": 0.0032482883543844972,
+                    "origin_distance_m": 5531.380552225852,
+                    "elapsed_min": 30.75,
+                    "event_age_s": 173175.0,
+                    "receipt_age_s": 173173.0,
+                    "position_uncertain": false
+                  }
+                },
+                "2026-06-16": {
+                  "elapsed_min": 30.39486916595033,
+                  "fraction": 0.7472452360485534,
+                  "gap_s": 21.0,
+                  "forward_crossings": 1,
+                  "lower": {
+                    "source_line": 2167,
+                    "raw": {
+                      "ping_id": "P-0002166",
+                      "vehicle_id": "V-10",
+                      "operator_id": "5",
+                      "lat": "19.141968",
+                      "lon": "72.916204",
+                      "speed_kmph": "11.3",
+                      "recorded_at": "2026-06-16 07:32:08+05:30",
+                      "received_at": "2026-06-16 07:32:11+05:30"
+                    },
+                    "ping_id": "P-0002166",
+                    "vehicle_id": "V-10",
+                    "operator_id": 5,
+                    "trip_id": "TRIP_009",
+                    "route_id": 12,
+                    "recorded_at": "2026-06-16T07:32:08+05:30",
+                    "received_at": "2026-06-16T07:32:11+05:30",
+                    "lat": 19.141968,
+                    "lon": 72.916204,
+                    "speed_kmph": 11.3,
+                    "usable_speed_kmph": 11.3,
+                    "progress_km": 5.5688617215927545,
+                    "offset_km": 0.002912573396348443,
+                    "origin_distance_m": 5457.481268645685,
+                    "elapsed_min": 30.133333333333333,
+                    "event_age_s": 87172.0,
+                    "receipt_age_s": 87169.0,
+                    "position_uncertain": false
+                  },
+                  "upper": {
+                    "source_line": 2168,
+                    "raw": {
+                      "ping_id": "P-0002167",
+                      "vehicle_id": "V-10",
+                      "operator_id": "5",
+                      "lat": "19.141538",
+                      "lon": "72.915719",
+                      "speed_kmph": "13.8",
+                      "recorded_at": "2026-06-16 07:32:29+05:30",
+                      "received_at": "2026-06-16 07:32:33+05:30"
+                    },
+                    "ping_id": "P-0002167",
+                    "vehicle_id": "V-10",
+                    "operator_id": 5,
+                    "trip_id": "TRIP_009",
+                    "route_id": 12,
+                    "recorded_at": "2026-06-16T07:32:29+05:30",
+                    "received_at": "2026-06-16T07:32:33+05:30",
+                    "lat": 19.141538,
+                    "lon": 72.915719,
+                    "speed_kmph": 13.8,
+                    "usable_speed_kmph": 13.8,
+                    "progress_km": 5.637427900474651,
+                    "offset_km": 0.010522136654985347,
+                    "origin_distance_m": 5527.1332289082675,
+                    "elapsed_min": 30.483333333333334,
+                    "event_age_s": 87151.0,
+                    "receipt_age_s": 87147.0,
+                    "position_uncertain": false
+                  }
+                }
+              },
+              "deficits": {
+                "2026-06-15": 8.86490522902233,
+                "2026-06-16": 9.121797500716337
+              },
+              "median_deficit": 8.993351364869334,
+              "timetable_crosscheck": 9.970977645540252,
+              "position_sensitivity": [
+                {
+                  "shift_m": -100.0,
+                  "deficits": {
+                    "2026-06-15": 9.307354942870159,
+                    "2026-06-16": 9.665334001243114
+                  }
+                },
+                {
+                  "shift_m": 100.0,
+                  "deficits": {
+                    "2026-06-15": 8.282337773420792,
+                    "2026-06-16": 8.586018038007602
+                  }
+                }
+              ]
+            },
+            {
+              "gps": {
+                "source_line": 3625,
+                "raw": {
+                  "ping_id": "P-0003624",
+                  "vehicle_id": "V-10",
+                  "operator_id": "5",
+                  "lat": "19.141519",
+                  "lon": "72.915351",
+                  "speed_kmph": "10.2",
+                  "recorded_at": "2026-06-17 07:44:51+05:30",
+                  "received_at": "2026-06-17 07:44:53+05:30"
+                },
+                "ping_id": "P-0003624",
+                "vehicle_id": "V-10",
+                "operator_id": 5,
+                "trip_id": "TRIP_015",
+                "route_id": 12,
+                "recorded_at": "2026-06-17T07:44:51+05:30",
+                "received_at": "2026-06-17T07:44:53+05:30",
+                "lat": 19.141519,
+                "lon": 72.915351,
+                "speed_kmph": 10.2,
+                "usable_speed_kmph": 10.2,
+                "progress_km": 5.671298932671393,
+                "offset_km": 0.00822849289678628,
+                "origin_distance_m": 5558.676179789045,
+                "elapsed_min": 39.85,
+                "event_age_s": 9.0,
+                "receipt_age_s": 7.0,
+                "position_uncertain": false
+              },
+              "references": {
+                "2026-06-15": {
+                  "elapsed_min": 30.921123718377142,
+                  "fraction": 0.4464097001142836,
+                  "gap_s": 23.0,
+                  "forward_crossings": 1,
+                  "lower": {
+                    "source_line": 619,
+                    "raw": {
+                      "ping_id": "P-0000618",
+                      "vehicle_id": "V-10",
+                      "operator_id": "5",
+                      "lat": "19.141569",
+                      "lon": "72.915641",
+                      "speed_kmph": "12.2",
+                      "recorded_at": "2026-06-15 07:38:45+05:30",
+                      "received_at": "2026-06-15 07:38:47+05:30"
+                    },
+                    "ping_id": "P-0000618",
+                    "vehicle_id": "V-10",
+                    "operator_id": 5,
+                    "trip_id": "TRIP_003",
+                    "route_id": 12,
+                    "recorded_at": "2026-06-15T07:38:45+05:30",
+                    "received_at": "2026-06-15T07:38:47+05:30",
+                    "lat": 19.141569,
+                    "lon": 72.915641,
+                    "speed_kmph": 12.2,
+                    "usable_speed_kmph": 12.2,
+                    "progress_km": 5.642537562230936,
+                    "offset_km": 0.0032482883543844972,
+                    "origin_distance_m": 5531.380552225852,
+                    "elapsed_min": 30.75,
+                    "event_age_s": 173175.0,
+                    "receipt_age_s": 173173.0,
+                    "position_uncertain": false
+                  },
+                  "upper": {
+                    "source_line": 620,
+                    "raw": {
+                      "ping_id": "P-0000619",
+                      "vehicle_id": "V-10",
+                      "operator_id": "5",
+                      "lat": "19.141322",
+                      "lon": "72.915081",
+                      "speed_kmph": "10.1",
+                      "recorded_at": "2026-06-15 07:39:08+05:30",
+                      "received_at": "2026-06-15 07:39:09+05:30"
+                    },
+                    "ping_id": "P-0000619",
+                    "vehicle_id": "V-10",
+                    "operator_id": 5,
+                    "trip_id": "TRIP_003",
+                    "route_id": 12,
+                    "recorded_at": "2026-06-15T07:39:08+05:30",
+                    "received_at": "2026-06-15T07:39:09+05:30",
+                    "lat": 19.141322,
+                    "lon": 72.915081,
+                    "speed_kmph": 10.1,
+                    "usable_speed_kmph": 10.1,
+                    "progress_km": 5.706965755509652,
+                    "offset_km": 0.004741671981446194,
+                    "origin_distance_m": 5594.509979352972,
+                    "elapsed_min": 31.133333333333333,
+                    "event_age_s": 173152.0,
+                    "receipt_age_s": 173151.0,
+                    "position_uncertain": false
+                  }
+                },
+                "2026-06-16": {
+                  "elapsed_min": 30.6692889693757,
+                  "fraction": 0.587228324344308,
+                  "gap_s": 19.0,
+                  "forward_crossings": 1,
+                  "lower": {
+                    "source_line": 2168,
+                    "raw": {
+                      "ping_id": "P-0002167",
+                      "vehicle_id": "V-10",
+                      "operator_id": "5",
+                      "lat": "19.141538",
+                      "lon": "72.915719",
+                      "speed_kmph": "13.8",
+                      "recorded_at": "2026-06-16 07:32:29+05:30",
+                      "received_at": "2026-06-16 07:32:33+05:30"
+                    },
+                    "ping_id": "P-0002167",
+                    "vehicle_id": "V-10",
+                    "operator_id": 5,
+                    "trip_id": "TRIP_009",
+                    "route_id": 12,
+                    "recorded_at": "2026-06-16T07:32:29+05:30",
+                    "received_at": "2026-06-16T07:32:33+05:30",
+                    "lat": 19.141538,
+                    "lon": 72.915719,
+                    "speed_kmph": 13.8,
+                    "usable_speed_kmph": 13.8,
+                    "progress_km": 5.637427900474651,
+                    "offset_km": 0.010522136654985347,
+                    "origin_distance_m": 5527.1332289082675,
+                    "elapsed_min": 30.483333333333334,
+                    "event_age_s": 87151.0,
+                    "receipt_age_s": 87147.0,
+                    "position_uncertain": false
+                  },
+                  "upper": {
+                    "source_line": 2169,
+                    "raw": {
+                      "ping_id": "P-0002168",
+                      "vehicle_id": "V-10",
+                      "operator_id": "5",
+                      "lat": "19.141229",
+                      "lon": "72.915276",
+                      "speed_kmph": "10.6",
+                      "recorded_at": "2026-06-16 07:32:48+05:30",
+                      "received_at": "2026-06-16 07:32:52+05:30"
+                    },
+                    "ping_id": "P-0002168",
+                    "vehicle_id": "V-10",
+                    "operator_id": 5,
+                    "trip_id": "TRIP_009",
+                    "route_id": 12,
+                    "recorded_at": "2026-06-16T07:32:48+05:30",
+                    "received_at": "2026-06-16T07:32:52+05:30",
+                    "lat": 19.141229,
+                    "lon": 72.915276,
+                    "speed_kmph": 10.6,
+                    "usable_speed_kmph": 10.6,
+                    "progress_km": 5.6951073937698045,
+                    "offset_km": 0.014903035627263417,
+                    "origin_distance_m": 5584.935300972979,
+                    "elapsed_min": 30.8,
+                    "event_age_s": 87132.0,
+                    "receipt_age_s": 87128.0,
+                    "position_uncertain": false
+                  }
+                }
+              },
+              "deficits": {
+                "2026-06-15": 8.928876281622859,
+                "2026-06-16": 9.180711030624302
+              },
+              "median_deficit": 9.05479365612358,
+              "timetable_crosscheck": 10.035137278863285,
+              "position_sensitivity": [
+                {
+                  "shift_m": -100.0,
+                  "deficits": {
+                    "2026-06-15": 9.411869538685764,
+                    "2026-06-16": 9.704225782670598
+                  }
+                },
+                {
+                  "shift_m": 100.0,
+                  "deficits": {
+                    "2026-06-15": 8.2874698606696,
+                    "2026-06-16": 8.648058355199485
+                  }
+                }
+              ]
+            }
+          ],
+          "numerical_eligible": true,
+          "reference_trips": {
+            "2026-06-15": "TRIP_003",
+            "2026-06-16": "TRIP_009"
+          },
+          "verdict": "PUSH_LATE 9 min",
+          "reason": "Both references at/above materiality across all three observations; rounded only after eligibility",
+          "data_state": "fresh_credible",
+          "credible_rows": 91,
+          "operator_ids": [
+            5
+          ],
+          "origin_bound": false,
+          "origin_radius_max_m": 5558.676179789045,
+          "event_gaps_s": [
+            19.0,
+            20.0
+          ]
+        }
+      ],
+      "excluded_trips": [],
+      "booking_exposure": 9,
+      "excluded_bookings": 0,
+      "reporting_conflict": {
+        "requested_lateness_minutes": 0,
+        "source": "HANDOFF.md rev. C",
+        "apply_to_operational_output": false
+      }
+    },
+    {
+      "route": 14,
+      "route_name": "Kandivali \u2192 Lower Parel",
+      "verdict": "CALL_DRIVER",
+      "note": "Direct verification takes precedence: Usable telemetry absent for more than five minutes; verify current service/location; completion is unconfirmed. Scope: TRIP_016/V-04.",
+      "evaluated_trips": [
+        {
+          "trip_id": "TRIP_016",
+          "vehicle_id": "V-04",
+          "scheduled_start": "2026-06-17T06:40:00+05:30",
+          "scheduled_end": "2026-06-17T07:55:00+05:30",
+          "route_id": 14,
+          "bookings": {
+            "bookings": 12,
+            "unique_riders": 12,
+            "promise_warnings": [],
+            "invalid_bookings": [],
+            "count_caveat": "Bookings, not confirmed waiting riders; no boarding/cancellation events."
+          },
+          "latest": {
+            "source_line": 3829,
+            "raw": {
+              "ping_id": "P-0003828",
+              "vehicle_id": "V-04",
+              "operator_id": "6",
+              "lat": "19.159702",
+              "lon": "72.846601",
+              "speed_kmph": "13.3",
+              "recorded_at": "2026-06-17 06:56:54+05:30",
+              "received_at": "2026-06-17 06:56:57+05:30"
+            },
+            "ping_id": "P-0003828",
+            "vehicle_id": "V-04",
+            "operator_id": 6,
+            "trip_id": "TRIP_016",
+            "route_id": 14,
+            "recorded_at": "2026-06-17T06:56:54+05:30",
+            "received_at": "2026-06-17T06:56:57+05:30",
+            "lat": 19.159702,
+            "lon": 72.846601,
+            "speed_kmph": 13.3,
+            "usable_speed_kmph": 13.3,
+            "progress_km": 5.044372143709419,
+            "offset_km": 0.005107580310789504,
+            "origin_distance_m": 4986.585387684487,
+            "elapsed_min": 16.9,
+            "event_age_s": 2886.0,
+            "receipt_age_s": 2883.0,
+            "position_uncertain": false
+          },
+          "observations": [
+            {
+              "gps": {
+                "source_line": 3827,
+                "raw": {
+                  "ping_id": "P-0003826",
+                  "vehicle_id": "V-04",
+                  "operator_id": "6",
+                  "lat": "19.16154",
+                  "lon": "72.846877",
+                  "speed_kmph": "16.5",
+                  "recorded_at": "2026-06-17 06:56:13+05:30",
+                  "received_at": "2026-06-17 06:56:16+05:30"
+                },
+                "ping_id": "P-0003826",
+                "vehicle_id": "V-04",
+                "operator_id": 6,
+                "trip_id": "TRIP_016",
+                "route_id": 14,
+                "recorded_at": "2026-06-17T06:56:13+05:30",
+                "received_at": "2026-06-17T06:56:16+05:30",
+                "lat": 19.16154,
+                "lon": 72.846877,
+                "speed_kmph": 16.5,
+                "usable_speed_kmph": 16.5,
+                "progress_km": 4.836196187115682,
+                "offset_km": 0.005546352165861562,
+                "origin_distance_m": 4780.192161081785,
+                "elapsed_min": 16.216666666666665,
+                "event_age_s": 2927.0,
+                "receipt_age_s": 2924.0,
+                "position_uncertain": false
+              },
+              "references": {},
+              "deficits": null,
+              "median_deficit": null,
+              "timetable_crosscheck": null
+            },
+            {
+              "gps": {
+                "source_line": 3828,
+                "raw": {
+                  "ping_id": "P-0003827",
+                  "vehicle_id": "V-04",
+                  "operator_id": "6",
+                  "lat": "19.160455",
+                  "lon": "72.84657",
+                  "speed_kmph": "21.2",
+                  "recorded_at": "2026-06-17 06:56:36+05:30",
+                  "received_at": "2026-06-17 06:56:38+05:30"
+                },
+                "ping_id": "P-0003827",
+                "vehicle_id": "V-04",
+                "operator_id": 6,
+                "trip_id": "TRIP_016",
+                "route_id": 14,
+                "recorded_at": "2026-06-17T06:56:36+05:30",
+                "received_at": "2026-06-17T06:56:38+05:30",
+                "lat": 19.160455,
+                "lon": 72.84657,
+                "speed_kmph": 21.2,
+                "usable_speed_kmph": 21.2,
+                "progress_km": 4.961271249285919,
+                "offset_km": 0.0056411919357124704,
+                "origin_distance_m": 4903.927548208198,
+                "elapsed_min": 16.6,
+                "event_age_s": 2904.0,
+                "receipt_age_s": 2902.0,
+                "position_uncertain": false
+              },
+              "references": {},
+              "deficits": null,
+              "median_deficit": null,
+              "timetable_crosscheck": null
+            },
+            {
+              "gps": {
+                "source_line": 3829,
+                "raw": {
+                  "ping_id": "P-0003828",
+                  "vehicle_id": "V-04",
+                  "operator_id": "6",
+                  "lat": "19.159702",
+                  "lon": "72.846601",
+                  "speed_kmph": "13.3",
+                  "recorded_at": "2026-06-17 06:56:54+05:30",
+                  "received_at": "2026-06-17 06:56:57+05:30"
+                },
+                "ping_id": "P-0003828",
+                "vehicle_id": "V-04",
+                "operator_id": 6,
+                "trip_id": "TRIP_016",
+                "route_id": 14,
+                "recorded_at": "2026-06-17T06:56:54+05:30",
+                "received_at": "2026-06-17T06:56:57+05:30",
+                "lat": 19.159702,
+                "lon": 72.846601,
+                "speed_kmph": 13.3,
+                "usable_speed_kmph": 13.3,
+                "progress_km": 5.044372143709419,
+                "offset_km": 0.005107580310789504,
+                "origin_distance_m": 4986.585387684487,
+                "elapsed_min": 16.9,
+                "event_age_s": 2886.0,
+                "receipt_age_s": 2883.0,
+                "position_uncertain": false
+              },
+              "references": {},
+              "deficits": null,
+              "median_deficit": null,
+              "timetable_crosscheck": null
+            }
+          ],
+          "numerical_eligible": false,
+          "reference_trips": {},
+          "verdict": "CALL_DRIVER",
+          "reason": "Usable telemetry absent for more than five minutes; verify current service/location; completion is unconfirmed",
+          "data_state": "stale",
+          "credible_rows": 52,
+          "operator_ids": [
+            6
+          ],
+          "origin_bound": false,
+          "origin_radius_max_m": 4986.585387684487,
+          "event_gaps_s": [
+            23.0,
+            18.0
+          ]
+        }
+      ],
+      "excluded_trips": [],
+      "booking_exposure": 12,
+      "excluded_bookings": 0,
+      "reporting_conflict": null
+    },
+    {
+      "route": 17,
+      "route_name": "Vashi \u2192 Worli",
+      "verdict": "CALL_DRIVER",
+      "note": "Direct verification takes precedence: Usable telemetry absent for more than five minutes; verify current service/location; completion is unconfirmed. Scope: TRIP_017/V-05. 6 booking/promise warnings require separate ops/product reconciliation; HOLD does not certify promises.",
+      "evaluated_trips": [
+        {
+          "trip_id": "TRIP_017",
+          "vehicle_id": "V-05",
+          "scheduled_start": "2026-06-17T06:50:00+05:30",
+          "scheduled_end": "2026-06-17T07:55:00+05:30",
+          "route_id": 17,
+          "bookings": {
+            "bookings": 16,
+            "unique_riders": 16,
+            "promise_warnings": [
+              {
+                "booking_id": "BKG_0184",
+                "rider_id": "R-1016",
+                "boarding_stop_id": "S-1707",
+                "source_line": 185,
+                "promised_eta": "2026-06-17T07:26:16+05:30",
+                "schedule_reference": "2026-06-17T07:44:55.926737+05:30",
+                "offset_seconds": -1119.926737
+              },
+              {
+                "booking_id": "BKG_0185",
+                "rider_id": "R-1159",
+                "boarding_stop_id": "S-1708",
+                "source_line": 186,
+                "promised_eta": "2026-06-17T07:17:12+05:30",
+                "schedule_reference": "2026-06-17T07:55:00+05:30",
+                "offset_seconds": -2268.0
+              },
+              {
+                "booking_id": "BKG_0186",
+                "rider_id": "R-1007",
+                "boarding_stop_id": "S-1707",
+                "source_line": 187,
+                "promised_eta": "2026-06-17T07:08:42+05:30",
+                "schedule_reference": "2026-06-17T07:44:55.926737+05:30",
+                "offset_seconds": -2173.926737
+              },
+              {
+                "booking_id": "BKG_0187",
+                "rider_id": "R-1086",
+                "boarding_stop_id": "S-1708",
+                "source_line": 188,
+                "promised_eta": "2026-06-17T07:26:16+05:30",
+                "schedule_reference": "2026-06-17T07:55:00+05:30",
+                "offset_seconds": -1724.0
+              },
+              {
+                "booking_id": "BKG_0188",
+                "rider_id": "R-1198",
+                "boarding_stop_id": "S-1707",
+                "source_line": 189,
+                "promised_eta": "2026-06-17T07:35:53+05:30",
+                "schedule_reference": "2026-06-17T07:44:55.926737+05:30",
+                "offset_seconds": -542.926737
+              },
+              {
+                "booking_id": "BKG_0189",
+                "rider_id": "R-1056",
+                "boarding_stop_id": "S-1708",
+                "source_line": 190,
+                "promised_eta": "2026-06-17T07:44:55+05:30",
+                "schedule_reference": "2026-06-17T07:55:00+05:30",
+                "offset_seconds": -605.0
+              }
+            ],
+            "invalid_bookings": [],
+            "count_caveat": "Bookings, not confirmed waiting riders; no boarding/cancellation events."
+          },
+          "latest": {
+            "source_line": 4088,
+            "raw": {
+              "ping_id": "P-0004087",
+              "vehicle_id": "V-05",
+              "operator_id": "5",
+              "lat": "19.035939",
+              "lon": "72.868918",
+              "speed_kmph": "5.0",
+              "recorded_at": "2026-06-17 07:27:40+05:30",
+              "received_at": "2026-06-17 07:27:42+05:30"
+            },
+            "ping_id": "P-0004087",
+            "vehicle_id": "V-05",
+            "operator_id": 5,
+            "trip_id": "TRIP_017",
+            "route_id": 17,
+            "recorded_at": "2026-06-17T07:27:40+05:30",
+            "received_at": "2026-06-17T07:27:42+05:30",
+            "lat": 19.035939,
+            "lon": 72.868918,
+            "speed_kmph": 5.0,
+            "usable_speed_kmph": 5.0,
+            "progress_km": 14.569439884080687,
+            "offset_km": 0.0028727319418035313,
+            "origin_distance_m": 14559.20014984482,
+            "elapsed_min": 37.666666666666664,
+            "event_age_s": 1040.0,
+            "receipt_age_s": 1038.0,
+            "position_uncertain": false
+          },
+          "observations": [
+            {
+              "gps": {
+                "source_line": 4086,
+                "raw": {
+                  "ping_id": "P-0004085",
+                  "vehicle_id": "V-05",
+                  "operator_id": "5",
+                  "lat": "19.036045",
+                  "lon": "72.869046",
+                  "speed_kmph": "3.8",
+                  "recorded_at": "2026-06-17 07:27:04+05:30",
+                  "received_at": "2026-06-17 07:27:07+05:30"
+                },
+                "ping_id": "P-0004085",
+                "vehicle_id": "V-05",
+                "operator_id": 5,
+                "trip_id": "TRIP_017",
+                "route_id": 17,
+                "recorded_at": "2026-06-17T07:27:04+05:30",
+                "received_at": "2026-06-17T07:27:07+05:30",
+                "lat": 19.036045,
+                "lon": 72.869046,
+                "speed_kmph": 3.8,
+                "usable_speed_kmph": 3.8,
+                "progress_km": 14.5522438511633,
+                "offset_km": 0.003261722193536375,
+                "origin_distance_m": 14542.78356461292,
+                "elapsed_min": 37.06666666666667,
+                "event_age_s": 1076.0,
+                "receipt_age_s": 1073.0,
+                "position_uncertain": false
+              },
+              "references": {},
+              "deficits": null,
+              "median_deficit": null,
+              "timetable_crosscheck": null
+            },
+            {
+              "gps": {
+                "source_line": 4087,
+                "raw": {
+                  "ping_id": "P-0004086",
+                  "vehicle_id": "V-05",
+                  "operator_id": "5",
+                  "lat": "19.036076",
+                  "lon": "72.868831",
+                  "speed_kmph": "3.9",
+                  "recorded_at": "2026-06-17 07:27:22+05:30",
+                  "received_at": "2026-06-17 07:27:25+05:30"
+                },
+                "ping_id": "P-0004086",
+                "vehicle_id": "V-05",
+                "operator_id": 5,
+                "trip_id": "TRIP_017",
+                "route_id": 17,
+                "recorded_at": "2026-06-17T07:27:22+05:30",
+                "received_at": "2026-06-17T07:27:25+05:30",
+                "lat": 19.036076,
+                "lon": 72.868831,
+                "speed_kmph": 3.9,
+                "usable_speed_kmph": 3.9,
+                "progress_km": 14.569458660785152,
+                "offset_km": 0.014894763789860644,
+                "origin_distance_m": 14563.249338133468,
+                "elapsed_min": 37.36666666666667,
+                "event_age_s": 1058.0,
+                "receipt_age_s": 1055.0,
+                "position_uncertain": false
+              },
+              "references": {},
+              "deficits": null,
+              "median_deficit": null,
+              "timetable_crosscheck": null
+            },
+            {
+              "gps": {
+                "source_line": 4088,
+                "raw": {
+                  "ping_id": "P-0004087",
+                  "vehicle_id": "V-05",
+                  "operator_id": "5",
+                  "lat": "19.035939",
+                  "lon": "72.868918",
+                  "speed_kmph": "5.0",
+                  "recorded_at": "2026-06-17 07:27:40+05:30",
+                  "received_at": "2026-06-17 07:27:42+05:30"
+                },
+                "ping_id": "P-0004087",
+                "vehicle_id": "V-05",
+                "operator_id": 5,
+                "trip_id": "TRIP_017",
+                "route_id": 17,
+                "recorded_at": "2026-06-17T07:27:40+05:30",
+                "received_at": "2026-06-17T07:27:42+05:30",
+                "lat": 19.035939,
+                "lon": 72.868918,
+                "speed_kmph": 5.0,
+                "usable_speed_kmph": 5.0,
+                "progress_km": 14.569439884080687,
+                "offset_km": 0.0028727319418035313,
+                "origin_distance_m": 14559.20014984482,
+                "elapsed_min": 37.666666666666664,
+                "event_age_s": 1040.0,
+                "receipt_age_s": 1038.0,
+                "position_uncertain": false
+              },
+              "references": {},
+              "deficits": null,
+              "median_deficit": null,
+              "timetable_crosscheck": null
+            }
+          ],
+          "numerical_eligible": false,
+          "reference_trips": {},
+          "verdict": "CALL_DRIVER",
+          "reason": "Usable telemetry absent for more than five minutes; verify current service/location; completion is unconfirmed",
+          "data_state": "stale",
+          "credible_rows": 114,
+          "operator_ids": [
+            5
+          ],
+          "origin_bound": false,
+          "origin_radius_max_m": 14563.249338133468,
+          "event_gaps_s": [
+            18.0,
+            18.0
+          ]
+        }
+      ],
+      "excluded_trips": [],
+      "booking_exposure": 16,
+      "excluded_bookings": 0,
+      "reporting_conflict": null
+    },
+    {
+      "route": 21,
+      "route_name": "Ghatkopar \u2192 BKC",
+      "verdict": "HOLD",
+      "note": "Both references below materiality across all three observations. Scope: TRIP_018/V-03. 6 bookings outside assessment on configured excluded trips: TRIP_019/V-09. 6 booking/promise warnings require separate ops/product reconciliation; HOLD does not certify promises.",
+      "evaluated_trips": [
+        {
+          "trip_id": "TRIP_018",
+          "vehicle_id": "V-03",
+          "scheduled_start": "2026-06-17T07:20:00+05:30",
+          "scheduled_end": "2026-06-17T08:00:00+05:30",
+          "route_id": 21,
+          "bookings": {
+            "bookings": 6,
+            "unique_riders": 6,
+            "promise_warnings": [
+              {
+                "booking_id": "BKG_0190",
+                "rider_id": "R-1272",
+                "boarding_stop_id": "S-2102",
+                "source_line": 191,
+                "promised_eta": "2026-06-17T07:09:31+05:30",
+                "schedule_reference": "2026-06-17T07:28:31.722208+05:30",
+                "offset_seconds": -1140.722208
+              },
+              {
+                "booking_id": "BKG_0191",
+                "rider_id": "R-1067",
+                "boarding_stop_id": "S-2105",
+                "source_line": 192,
+                "promised_eta": "2026-06-17T07:32:14+05:30",
+                "schedule_reference": "2026-06-17T07:51:14.039726+05:30",
+                "offset_seconds": -1140.039726
+              },
+              {
+                "booking_id": "BKG_0192",
+                "rider_id": "R-1206",
+                "boarding_stop_id": "S-2103",
+                "source_line": 193,
+                "promised_eta": "2026-06-17T07:18:52+05:30",
+                "schedule_reference": "2026-06-17T07:37:52.659564+05:30",
+                "offset_seconds": -1140.659564
+              },
+              {
+                "booking_id": "BKG_0193",
+                "rider_id": "R-1251",
+                "boarding_stop_id": "S-2103",
+                "source_line": 194,
+                "promised_eta": "2026-06-17T07:18:52+05:30",
+                "schedule_reference": "2026-06-17T07:37:52.659564+05:30",
+                "offset_seconds": -1140.659564
+              },
+              {
+                "booking_id": "BKG_0194",
+                "rider_id": "R-1210",
+                "boarding_stop_id": "S-2106",
+                "source_line": 195,
+                "promised_eta": "2026-06-17T07:41:00+05:30",
+                "schedule_reference": "2026-06-17T08:00:00+05:30",
+                "offset_seconds": -1140.0
+              },
+              {
+                "booking_id": "BKG_0195",
+                "rider_id": "R-1004",
+                "boarding_stop_id": "S-2103",
+                "source_line": 196,
+                "promised_eta": "2026-06-17T07:18:52+05:30",
+                "schedule_reference": "2026-06-17T07:37:52.659564+05:30",
+                "offset_seconds": -1140.659564
+              }
+            ],
+            "invalid_bookings": [],
+            "count_caveat": "Bookings, not confirmed waiting riders; no boarding/cancellation events."
+          },
+          "latest": {
+            "source_line": 4163,
+            "raw": {
+              "ping_id": "P-0004162",
+              "vehicle_id": "V-03",
+              "operator_id": "5",
+              "lat": "19.07418",
+              "lon": "72.883848",
+              "speed_kmph": "8.9",
+              "recorded_at": "2026-06-17 07:44:51+05:30",
+              "received_at": "2026-06-17 07:44:52+05:30"
+            },
+            "ping_id": "P-0004162",
+            "vehicle_id": "V-03",
+            "operator_id": 5,
+            "trip_id": "TRIP_018",
+            "route_id": 21,
+            "recorded_at": "2026-06-17T07:44:51+05:30",
+            "received_at": "2026-06-17T07:44:52+05:30",
+            "lat": 19.07418,
+            "lon": 72.883848,
+            "speed_kmph": 8.9,
+            "usable_speed_kmph": 8.9,
+            "progress_km": 3.039049650463324,
+            "offset_km": 0.004408466871066578,
+            "origin_distance_m": 2942.4697066467247,
+            "elapsed_min": 24.85,
+            "event_age_s": 9.0,
+            "receipt_age_s": 8.0,
+            "position_uncertain": false
+          },
+          "observations": [
+            {
+              "gps": {
+                "source_line": 4161,
+                "raw": {
+                  "ping_id": "P-0004160",
+                  "vehicle_id": "V-03",
+                  "operator_id": "5",
+                  "lat": "19.074646",
+                  "lon": "72.884444",
+                  "speed_kmph": "10.8",
+                  "recorded_at": "2026-06-17 07:44:15+05:30",
+                  "received_at": "2026-06-17 07:44:17+05:30"
+                },
+                "ping_id": "P-0004160",
+                "vehicle_id": "V-03",
+                "operator_id": 5,
+                "trip_id": "TRIP_018",
+                "route_id": 21,
+                "recorded_at": "2026-06-17T07:44:15+05:30",
+                "received_at": "2026-06-17T07:44:17+05:30",
+                "lat": 19.074646,
+                "lon": 72.884444,
+                "speed_kmph": 10.8,
+                "usable_speed_kmph": 10.8,
+                "progress_km": 2.9582800863114103,
+                "offset_km": 0.013579686089173657,
+                "origin_distance_m": 2863.3441854305793,
+                "elapsed_min": 24.25,
+                "event_age_s": 45.0,
+                "receipt_age_s": 43.0,
+                "position_uncertain": false
+              },
+              "references": {
+                "2026-06-15": {
+                  "elapsed_min": 25.83774141593957,
+                  "fraction": 0.8302038616533692,
+                  "gap_s": 22.0,
+                  "forward_crossings": 1,
+                  "lower": {
+                    "source_line": 1435,
+                    "raw": {
+                      "ping_id": "P-0001434",
+                      "vehicle_id": "V-03",
+                      "operator_id": "5",
+                      "lat": "19.074881",
+                      "lon": "72.884923",
+                      "speed_kmph": "1.5",
+                      "recorded_at": "2026-06-15 07:46:32+05:30",
+                      "received_at": "2026-06-15 07:46:35+05:30"
+                    },
+                    "ping_id": "P-0001434",
+                    "vehicle_id": "V-03",
+                    "operator_id": 5,
+                    "trip_id": "TRIP_006",
+                    "route_id": 21,
+                    "recorded_at": "2026-06-15T07:46:32+05:30",
+                    "received_at": "2026-06-15T07:46:35+05:30",
+                    "lat": 19.074881,
+                    "lon": 72.884923,
+                    "speed_kmph": 1.5,
+                    "usable_speed_kmph": 1.5,
+                    "progress_km": 2.9018437862612654,
+                    "offset_km": 0.007957652622081555,
+                    "origin_distance_m": 2806.642191054497,
+                    "elapsed_min": 25.533333333333335,
+                    "event_age_s": 172708.0,
+                    "receipt_age_s": 172705.0,
+                    "position_uncertain": false
+                  },
+                  "upper": {
+                    "source_line": 1436,
+                    "raw": {
+                      "ping_id": "P-0001435",
+                      "vehicle_id": "V-03",
+                      "operator_id": "5",
+                      "lat": "19.074443",
+                      "lon": "72.884453",
+                      "speed_kmph": "14.0",
+                      "recorded_at": "2026-06-15 07:46:54+05:30",
+                      "received_at": "2026-06-15 07:46:57+05:30"
+                    },
+                    "ping_id": "P-0001435",
+                    "vehicle_id": "V-03",
+                    "operator_id": 5,
+                    "trip_id": "TRIP_006",
+                    "route_id": 21,
+                    "recorded_at": "2026-06-15T07:46:54+05:30",
+                    "received_at": "2026-06-15T07:46:57+05:30",
+                    "lat": 19.074443,
+                    "lon": 72.884453,
+                    "speed_kmph": 14.0,
+                    "usable_speed_kmph": 14.0,
+                    "progress_km": 2.969822631767658,
+                    "offset_km": 0.005841584867294777,
+                    "origin_distance_m": 2872.523845587384,
+                    "elapsed_min": 25.9,
+                    "event_age_s": 172686.0,
+                    "receipt_age_s": 172683.0,
+                    "position_uncertain": false
+                  }
+                },
+                "2026-06-16": {
+                  "elapsed_min": 23.72767959334033,
+                  "fraction": 0.5754898000190798,
+                  "gap_s": 22.0,
+                  "forward_crossings": 1,
+                  "lower": {
+                    "source_line": 2976,
+                    "raw": {
+                      "ping_id": "P-0002975",
+                      "vehicle_id": "V-03",
+                      "operator_id": "5",
+                      "lat": "19.074662",
+                      "lon": "72.884827",
+                      "speed_kmph": "6.6",
+                      "recorded_at": "2026-06-16 07:44:31+05:30",
+                      "received_at": "2026-06-16 07:44:35+05:30"
+                    },
+                    "ping_id": "P-0002975",
+                    "vehicle_id": "V-03",
+                    "operator_id": 5,
+                    "trip_id": "TRIP_012",
+                    "route_id": 21,
+                    "recorded_at": "2026-06-16T07:44:31+05:30",
+                    "received_at": "2026-06-16T07:44:35+05:30",
+                    "lat": 19.074662,
+                    "lon": 72.884827,
+                    "speed_kmph": 6.6,
+                    "usable_speed_kmph": 6.6,
+                    "progress_km": 2.9235996774176547,
+                    "offset_km": 0.0069240171544689985,
+                    "origin_distance_m": 2826.481374839232,
+                    "elapsed_min": 23.516666666666666,
+                    "event_age_s": 86429.0,
+                    "receipt_age_s": 86425.0,
+                    "position_uncertain": false
+                  },
+                  "upper": {
+                    "source_line": 2977,
+                    "raw": {
+                      "ping_id": "P-0002976",
+                      "vehicle_id": "V-03",
+                      "operator_id": "5",
+                      "lat": "19.074393",
+                      "lon": "72.884328",
+                      "speed_kmph": "11.4",
+                      "recorded_at": "2026-06-16 07:44:53+05:30",
+                      "received_at": "2026-06-16 07:44:56+05:30"
+                    },
+                    "ping_id": "P-0002976",
+                    "vehicle_id": "V-03",
+                    "operator_id": 5,
+                    "trip_id": "TRIP_012",
+                    "route_id": 21,
+                    "recorded_at": "2026-06-16T07:44:53+05:30",
+                    "received_at": "2026-06-16T07:44:56+05:30",
+                    "lat": 19.074393,
+                    "lon": 72.884328,
+                    "speed_kmph": 11.4,
+                    "usable_speed_kmph": 11.4,
+                    "progress_km": 2.9838620989108,
+                    "offset_km": 0.003319749280687422,
+                    "origin_distance_m": 2886.759553145592,
+                    "elapsed_min": 23.883333333333333,
+                    "event_age_s": 86407.0,
+                    "receipt_age_s": 86404.0,
+                    "position_uncertain": false
+                  }
+                }
+              },
+              "deficits": {
+                "2026-06-15": -1.5877414159395684,
+                "2026-06-16": 0.5223204066596701
+              },
+              "median_deficit": -0.5327105046399492,
+              "timetable_crosscheck": -0.2144931126255507,
+              "position_sensitivity": [
+                {
+                  "shift_m": -100.0,
+                  "deficits": {
+                    "2026-06-15": -0.756213130130309,
+                    "2026-06-16": 1.3299711988351142
+                  }
+                },
+                {
+                  "shift_m": 100.0,
+                  "deficits": {
+                    "2026-06-15": -2.4912108937651958,
+                    "2026-06-16": -0.3057733449162008
+                  }
+                }
+              ]
+            },
+            {
+              "gps": {
+                "source_line": 4162,
+                "raw": {
+                  "ping_id": "P-0004161",
+                  "vehicle_id": "V-03",
+                  "operator_id": "5",
+                  "lat": "19.074468",
+                  "lon": "72.884195",
+                  "speed_kmph": "5.0",
+                  "recorded_at": "2026-06-17 07:44:33+05:30",
+                  "received_at": "2026-06-17 07:44:34+05:30"
+                },
+                "ping_id": "P-0004161",
+                "vehicle_id": "V-03",
+                "operator_id": 5,
+                "trip_id": "TRIP_018",
+                "route_id": 21,
+                "recorded_at": "2026-06-17T07:44:33+05:30",
+                "received_at": "2026-06-17T07:44:34+05:30",
+                "lat": 19.074468,
+                "lon": 72.884195,
+                "speed_kmph": 5.0,
+                "usable_speed_kmph": 5.0,
+                "progress_km": 2.991010429682057,
+                "offset_km": 0.01130215457416519,
+                "origin_distance_m": 2895.5647063051633,
+                "elapsed_min": 24.55,
+                "event_age_s": 27.0,
+                "receipt_age_s": 26.0,
+                "position_uncertain": false
+              },
+              "references": {
+                "2026-06-15": {
+                  "elapsed_min": 26.24193979132492,
+                  "fraction": 0.12581937397476342,
+                  "gap_s": 20.0,
+                  "forward_crossings": 1,
+                  "lower": {
+                    "source_line": 1437,
+                    "raw": {
+                      "ping_id": "P-0001436",
+                      "vehicle_id": "V-03",
+                      "operator_id": "5",
+                      "lat": "19.074495",
+                      "lon": "72.884228",
+                      "speed_kmph": "6.1",
+                      "recorded_at": "2026-06-15 07:47:12+05:30",
+                      "received_at": "2026-06-15 07:47:15+05:30"
+                    },
+                    "ping_id": "P-0001436",
+                    "vehicle_id": "V-03",
+                    "operator_id": 5,
+                    "trip_id": "TRIP_006",
+                    "route_id": 21,
+                    "recorded_at": "2026-06-15T07:47:12+05:30",
+                    "received_at": "2026-06-15T07:47:15+05:30",
+                    "lat": 19.074495,
+                    "lon": 72.884228,
+                    "speed_kmph": 6.1,
+                    "usable_speed_kmph": 6.1,
+                    "progress_km": 2.986465497569958,
+                    "offset_km": 0.011921519908828832,
+                    "origin_distance_m": 2891.125945447307,
+                    "elapsed_min": 26.2,
+                    "event_age_s": 172668.0,
+                    "receipt_age_s": 172665.0,
+                    "position_uncertain": false
+                  },
+                  "upper": {
+                    "source_line": 1438,
+                    "raw": {
+                      "ping_id": "P-0001437",
+                      "vehicle_id": "V-03",
+                      "operator_id": "5",
+                      "lat": "19.07428",
+                      "lon": "72.883966",
+                      "speed_kmph": "8.1",
+                      "recorded_at": "2026-06-15 07:47:32+05:30",
+                      "received_at": "2026-06-15 07:47:33+05:30"
+                    },
+                    "ping_id": "P-0001437",
+                    "vehicle_id": "V-03",
+                    "operator_id": 5,
+                    "trip_id": "TRIP_006",
+                    "route_id": 21,
+                    "recorded_at": "2026-06-15T07:47:32+05:30",
+                    "received_at": "2026-06-15T07:47:33+05:30",
+                    "lat": 19.07428,
+                    "lon": 72.883966,
+                    "speed_kmph": 8.1,
+                    "usable_speed_kmph": 8.1,
+                    "progress_km": 3.0225881706410447,
+                    "offset_km": 0.006944872936974492,
+                    "origin_distance_m": 2926.411144313873,
+                    "elapsed_min": 26.533333333333335,
+                    "event_age_s": 172648.0,
+                    "receipt_age_s": 172647.0,
+                    "position_uncertain": false
+                  }
+                },
+                "2026-06-16": {
+                  "elapsed_min": 23.949555771598572,
+                  "fraction": 0.1892069664721074,
+                  "gap_s": 21.0,
+                  "forward_crossings": 1,
+                  "lower": {
+                    "source_line": 2977,
+                    "raw": {
+                      "ping_id": "P-0002976",
+                      "vehicle_id": "V-03",
+                      "operator_id": "5",
+                      "lat": "19.074393",
+                      "lon": "72.884328",
+                      "speed_kmph": "11.4",
+                      "recorded_at": "2026-06-16 07:44:53+05:30",
+                      "received_at": "2026-06-16 07:44:56+05:30"
+                    },
+                    "ping_id": "P-0002976",
+                    "vehicle_id": "V-03",
+                    "operator_id": 5,
+                    "trip_id": "TRIP_012",
+                    "route_id": 21,
+                    "recorded_at": "2026-06-16T07:44:53+05:30",
+                    "received_at": "2026-06-16T07:44:56+05:30",
+                    "lat": 19.074393,
+                    "lon": 72.884328,
+                    "speed_kmph": 11.4,
+                    "usable_speed_kmph": 11.4,
+                    "progress_km": 2.9838620989108,
+                    "offset_km": 0.003319749280687422,
+                    "origin_distance_m": 2886.759553145592,
+                    "elapsed_min": 23.883333333333333,
+                    "event_age_s": 86407.0,
+                    "receipt_age_s": 86404.0,
+                    "position_uncertain": false
+                  },
+                  "upper": {
+                    "source_line": 2978,
+                    "raw": {
+                      "ping_id": "P-0002977",
+                      "vehicle_id": "V-03",
+                      "operator_id": "5",
+                      "lat": "19.074213",
+                      "lon": "72.884023",
+                      "speed_kmph": "5.4",
+                      "recorded_at": "2026-06-16 07:45:14+05:30",
+                      "received_at": "2026-06-16 07:45:15+05:30"
+                    },
+                    "ping_id": "P-0002977",
+                    "vehicle_id": "V-03",
+                    "operator_id": 5,
+                    "trip_id": "TRIP_012",
+                    "route_id": 21,
+                    "recorded_at": "2026-06-16T07:45:14+05:30",
+                    "received_at": "2026-06-16T07:45:15+05:30",
+                    "lat": 19.074213,
+                    "lon": 72.884023,
+                    "speed_kmph": 5.4,
+                    "usable_speed_kmph": 5.4,
+                    "progress_km": 3.0216425829201516,
+                    "offset_km": 0.0025677411654941957,
+                    "origin_distance_m": 2924.381046372431,
+                    "elapsed_min": 24.233333333333334,
+                    "event_age_s": 86386.0,
+                    "receipt_age_s": 86385.0,
+                    "position_uncertain": false
+                  }
+                }
+              },
+              "deficits": {
+                "2026-06-15": -1.69193979132492,
+                "2026-06-16": 0.6004442284014289
+              },
+              "median_deficit": -0.5457477814617455,
+              "timetable_crosscheck": -0.1851677061740844,
+              "position_sensitivity": [
+                {
+                  "shift_m": -100.0,
+                  "deficits": {
+                    "2026-06-15": -0.7031541442197344,
+                    "2026-06-16": 1.2522949321500398
+                  }
+                },
+                {
+                  "shift_m": 100.0,
+                  "deficits": {
+                    "2026-06-15": -2.505412482344312,
+                    "2026-06-16": -0.32141851059125415
+                  }
+                }
+              ]
+            },
+            {
+              "gps": {
+                "source_line": 4163,
+                "raw": {
+                  "ping_id": "P-0004162",
+                  "vehicle_id": "V-03",
+                  "operator_id": "5",
+                  "lat": "19.07418",
+                  "lon": "72.883848",
+                  "speed_kmph": "8.9",
+                  "recorded_at": "2026-06-17 07:44:51+05:30",
+                  "received_at": "2026-06-17 07:44:52+05:30"
+                },
+                "ping_id": "P-0004162",
+                "vehicle_id": "V-03",
+                "operator_id": 5,
+                "trip_id": "TRIP_018",
+                "route_id": 21,
+                "recorded_at": "2026-06-17T07:44:51+05:30",
+                "received_at": "2026-06-17T07:44:52+05:30",
+                "lat": 19.07418,
+                "lon": 72.883848,
+                "speed_kmph": 8.9,
+                "usable_speed_kmph": 8.9,
+                "progress_km": 3.039049650463324,
+                "offset_km": 0.004408466871066578,
+                "origin_distance_m": 2942.4697066467247,
+                "elapsed_min": 24.85,
+                "event_age_s": 9.0,
+                "receipt_age_s": 8.0,
+                "position_uncertain": false
+              },
+              "references": {
+                "2026-06-15": {
+                  "elapsed_min": 26.62920860935263,
+                  "fraction": 0.2739293600551291,
+                  "gap_s": 21.0,
+                  "forward_crossings": 1,
+                  "lower": {
+                    "source_line": 1438,
+                    "raw": {
+                      "ping_id": "P-0001437",
+                      "vehicle_id": "V-03",
+                      "operator_id": "5",
+                      "lat": "19.07428",
+                      "lon": "72.883966",
+                      "speed_kmph": "8.1",
+                      "recorded_at": "2026-06-15 07:47:32+05:30",
+                      "received_at": "2026-06-15 07:47:33+05:30"
+                    },
+                    "ping_id": "P-0001437",
+                    "vehicle_id": "V-03",
+                    "operator_id": 5,
+                    "trip_id": "TRIP_006",
+                    "route_id": 21,
+                    "recorded_at": "2026-06-15T07:47:32+05:30",
+                    "received_at": "2026-06-15T07:47:33+05:30",
+                    "lat": 19.07428,
+                    "lon": 72.883966,
+                    "speed_kmph": 8.1,
+                    "usable_speed_kmph": 8.1,
+                    "progress_km": 3.0225881706410447,
+                    "offset_km": 0.006944872936974492,
+                    "origin_distance_m": 2926.411144313873,
+                    "elapsed_min": 26.533333333333335,
+                    "event_age_s": 172648.0,
+                    "receipt_age_s": 172647.0,
+                    "position_uncertain": false
+                  },
+                  "upper": {
+                    "source_line": 1439,
+                    "raw": {
+                      "ping_id": "P-0001438",
+                      "vehicle_id": "V-03",
+                      "operator_id": "5",
+                      "lat": "19.073895",
+                      "lon": "72.883549",
+                      "speed_kmph": "12.6",
+                      "recorded_at": "2026-06-15 07:47:53+05:30",
+                      "received_at": "2026-06-15 07:47:56+05:30"
+                    },
+                    "ping_id": "P-0001438",
+                    "vehicle_id": "V-03",
+                    "operator_id": 5,
+                    "trip_id": "TRIP_006",
+                    "route_id": 21,
+                    "recorded_at": "2026-06-15T07:47:53+05:30",
+                    "received_at": "2026-06-15T07:47:56+05:30",
+                    "lat": 19.073895,
+                    "lon": 72.883549,
+                    "speed_kmph": 12.6,
+                    "usable_speed_kmph": 12.6,
+                    "progress_km": 3.082682056958913,
+                    "offset_km": 0.0049622364832669725,
+                    "origin_distance_m": 2984.773494768911,
+                    "elapsed_min": 26.883333333333333,
+                    "event_age_s": 172627.0,
+                    "receipt_age_s": 172624.0,
+                    "position_uncertain": false
+                  }
+                },
+                "2026-06-16": {
+                  "elapsed_min": 24.386529772520383,
+                  "fraction": 0.4377041119629946,
+                  "gap_s": 21.0,
+                  "forward_crossings": 1,
+                  "lower": {
+                    "source_line": 2978,
+                    "raw": {
+                      "ping_id": "P-0002977",
+                      "vehicle_id": "V-03",
+                      "operator_id": "5",
+                      "lat": "19.074213",
+                      "lon": "72.884023",
+                      "speed_kmph": "5.4",
+                      "recorded_at": "2026-06-16 07:45:14+05:30",
+                      "received_at": "2026-06-16 07:45:15+05:30"
+                    },
+                    "ping_id": "P-0002977",
+                    "vehicle_id": "V-03",
+                    "operator_id": 5,
+                    "trip_id": "TRIP_012",
+                    "route_id": 21,
+                    "recorded_at": "2026-06-16T07:45:14+05:30",
+                    "received_at": "2026-06-16T07:45:15+05:30",
+                    "lat": 19.074213,
+                    "lon": 72.884023,
+                    "speed_kmph": 5.4,
+                    "usable_speed_kmph": 5.4,
+                    "progress_km": 3.0216425829201516,
+                    "offset_km": 0.0025677411654941957,
+                    "origin_distance_m": 2924.381046372431,
+                    "elapsed_min": 24.233333333333334,
+                    "event_age_s": 86386.0,
+                    "receipt_age_s": 86385.0,
+                    "position_uncertain": false
+                  },
+                  "upper": {
+                    "source_line": 2979,
+                    "raw": {
+                      "ping_id": "P-0002978",
+                      "vehicle_id": "V-03",
+                      "operator_id": "5",
+                      "lat": "19.074022",
+                      "lon": "72.883703",
+                      "speed_kmph": "6.3",
+                      "recorded_at": "2026-06-16 07:45:35+05:30",
+                      "received_at": "2026-06-16 07:45:37+05:30"
+                    },
+                    "ping_id": "P-0002978",
+                    "vehicle_id": "V-03",
+                    "operator_id": 5,
+                    "trip_id": "TRIP_012",
+                    "route_id": 21,
+                    "recorded_at": "2026-06-16T07:45:35+05:30",
+                    "received_at": "2026-06-16T07:45:37+05:30",
+                    "lat": 19.074022,
+                    "lon": 72.883703,
+                    "speed_kmph": 6.3,
+                    "usable_speed_kmph": 6.3,
+                    "progress_km": 3.0614116119683503,
+                    "offset_km": 0.001978739566075488,
+                    "origin_distance_m": 2963.9646941349824,
+                    "elapsed_min": 24.583333333333332,
+                    "event_age_s": 86365.0,
+                    "receipt_age_s": 86363.0,
+                    "position_uncertain": false
+                  }
+                }
+              },
+              "deficits": {
+                "2026-06-15": -1.7792086093526294,
+                "2026-06-16": 0.4634702274796183
+              },
+              "median_deficit": -0.6578691909365055,
+              "timetable_crosscheck": -0.28244421537865705,
+              "position_sensitivity": [
+                {
+                  "shift_m": -100.0,
+                  "deficits": {
+                    "2026-06-15": -0.8840156206801879,
+                    "2026-06-16": 1.239327981799466
+                  }
+                },
+                {
+                  "shift_m": 100.0,
+                  "deficits": {
+                    "2026-06-15": -2.6614537561198652,
+                    "2026-06-16": -0.33517192737063795
+                  }
+                }
+              ]
+            }
+          ],
+          "numerical_eligible": true,
+          "reference_trips": {
+            "2026-06-15": "TRIP_006",
+            "2026-06-16": "TRIP_012"
+          },
+          "verdict": "HOLD",
+          "reason": "Both references below materiality across all three observations",
+          "data_state": "fresh_credible",
+          "credible_rows": 75,
+          "operator_ids": [
+            5
+          ],
+          "origin_bound": false,
+          "origin_radius_max_m": 2942.4697066467247,
+          "event_gaps_s": [
+            18.0,
+            18.0
+          ]
+        }
+      ],
+      "excluded_trips": [
+        {
+          "trip_id": "TRIP_019",
+          "vehicle_id": "V-09",
+          "operators": [
+            7
+          ],
+          "bookings": {
+            "bookings": 6,
+            "unique_riders": 6,
+            "promise_warnings": [],
+            "invalid_bookings": [],
+            "count_caveat": "Bookings, not confirmed waiting riders; no boarding/cancellation events."
+          },
+          "reason": "Configured operator exclusion"
+        }
+      ],
+      "booking_exposure": 6,
+      "excluded_bookings": 6,
+      "reporting_conflict": null
+    }
+  ]
+}

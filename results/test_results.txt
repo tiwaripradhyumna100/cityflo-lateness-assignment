@@ -1,0 +1,26 @@
+test_audit_and_all_consumed_evidence_respect_cutoff (tests.test_policy.AcceptedExtractRegression.test_audit_and_all_consumed_evidence_respect_cutoff) ... ok
+test_expected_actions_and_unrounded_calculations (tests.test_policy.AcceptedExtractRegression.test_expected_actions_and_unrounded_calculations) ... ok
+test_output_has_exactly_one_row_per_route (tests.test_policy.AcceptedExtractRegression.test_output_has_exactly_one_row_per_route) ... ok
+test_contractual_request_is_annotation_not_evidence (tests.test_policy.ConsequentialRules.test_contractual_request_is_annotation_not_evidence) ... ok
+test_duplicate_payload_removed_without_manufacturing_support (tests.test_policy.ConsequentialRules.test_duplicate_payload_removed_without_manufacturing_support) ... ok
+test_freshness_boundary_and_broken_persistence (tests.test_policy.ConsequentialRules.test_freshness_boundary_and_broken_persistence) ... ok
+test_future_payload_cannot_change_live_output (tests.test_policy.ConsequentialRules.test_future_payload_cannot_change_live_output) ... ok
+test_generic_dates_reference_anchor_and_persistence (tests.test_policy.ConsequentialRules.test_generic_dates_reference_anchor_and_persistence) ... ok
+test_malformed_clock_not_corrected (tests.test_policy.ConsequentialRules.test_malformed_clock_not_corrected) ... ok
+test_missing_reference_does_not_become_zero (tests.test_policy.ConsequentialRules.test_missing_reference_does_not_become_zero) ... ok
+test_multiple_eligible_trips_do_not_get_arbitrary_numeric_route_push (tests.test_policy.ConsequentialRules.test_multiple_eligible_trips_do_not_get_arbitrary_numeric_route_push) ... ok
+test_negative_speed_retains_coordinate (tests.test_policy.ConsequentialRules.test_negative_speed_retains_coordinate) ... ok
+test_only_excluded_trip_still_has_route_row (tests.test_policy.ConsequentialRules.test_only_excluded_trip_still_has_route_row) ... ok
+test_operator_exclusion_retains_route_and_exposure (tests.test_policy.ConsequentialRules.test_operator_exclusion_retains_route_and_exposure) ... ok
+test_origin_bound_call_requires_observed_duration (tests.test_policy.ConsequentialRules.test_origin_bound_call_requires_observed_duration) ... ok
+test_receipt_boundary_is_inclusive (tests.test_policy.ConsequentialRules.test_receipt_boundary_is_inclusive) ... ok
+test_reused_id_retains_distinct_event (tests.test_policy.ConsequentialRules.test_reused_id_retains_distinct_event) ... ok
+test_short_staleness_withholds_number_without_driver_call (tests.test_policy.ConsequentialRules.test_short_staleness_withholds_number_without_driver_call) ... ok
+test_stale_precedes_possible_historical_number (tests.test_policy.ConsequentialRules.test_stale_precedes_possible_historical_number) ... ok
+test_teleport_rejected_valid_return_survives (tests.test_policy.ConsequentialRules.test_teleport_rejected_valid_return_survives) ... ok
+test_threshold_persistence_and_rounding_order (tests.test_policy.ConsequentialRules.test_threshold_persistence_and_rounding_order) ... ok
+
+----------------------------------------------------------------------
+Ran 21 tests in 4.457s
+
+OK

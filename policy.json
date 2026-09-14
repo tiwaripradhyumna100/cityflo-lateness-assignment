@@ -1,0 +1,20 @@
+{
+  "freshness_seconds": 60,
+  "materiality_minutes": 5,
+  "persistence_points": 3,
+  "persistence_gap_seconds": 30,
+  "verification_gap_seconds": 300,
+  "origin_radius_m": 100,
+  "origin_duration_minutes": 5,
+  "reference_gap_seconds": 60,
+  "history_days": 2,
+  "position_stress_m": 100,
+  "excluded_operators": [7],
+  "contractual_reporting_requests": {
+    "12": {
+      "requested_lateness_minutes": 0,
+      "source": "HANDOFF.md rev. C",
+      "apply_to_operational_output": false
+    }
+  }
+}
